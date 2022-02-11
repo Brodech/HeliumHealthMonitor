@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "89e120b8-e851-439d-aa48-88f5230538f0": {
+      "ProjectGuid": "89e120b8-e851-439d-aa48-88f5230538f0",
+      "DisplayName": "HeliumHealthMonitor.UI",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
