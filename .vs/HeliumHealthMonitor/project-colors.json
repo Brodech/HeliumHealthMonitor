@@ -5,7 +5,17 @@
       "ProjectGuid": "89e120b8-e851-439d-aa48-88f5230538f0",
       "DisplayName": "HeliumHealthMonitor.UI",
       "ColorIndex": 0
+    },
+    "e6b9e5fe-012e-4f32-8df1-6ac009bb6448": {
+      "ProjectGuid": "e6b9e5fe-012e-4f32-8df1-6ac009bb6448",
+      "DisplayName": "HeliumHealthMonitor.Data.MariaDBLayer",
+      "ColorIndex": 1
+    },
+    "c1581749-e211-4a73-bd95-19ad4ac0dc76": {
+      "ProjectGuid": "c1581749-e211-4a73-bd95-19ad4ac0dc76",
+      "DisplayName": "HeliumHealthMonitor.Data.Shared",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 3
 }
