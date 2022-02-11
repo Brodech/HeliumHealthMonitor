@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.UI", "HeliumHealthMonitor.UI\HeliumHealthMonitor.UI.csproj", "{89E120B8-E851-439D-AA48-88F5230538F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliumHealthMonitor.Data.MariaDBLayer", "HeliumHealthMonitor.Data.MariaDBLayer\HeliumHealthMonitor.Data.MariaDBLayer.csproj", "{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.MariaDBLayer", "HeliumHealthMonitor.Data.MariaDBLayer\HeliumHealthMonitor.Data.MariaDBLayer.csproj", "{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliumHealthMonitor.Data.Shared", "HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj", "{C1581749-E211-4A73-BD95-19AD4AC0DC76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Shared", "HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj", "{C1581749-E211-4A73-BD95-19AD4AC0DC76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

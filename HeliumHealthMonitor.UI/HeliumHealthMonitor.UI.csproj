@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\HeliumHealthMonitor.Data.MariaDBLayer\HeliumHealthMonitor.Data.MariaDBLayer.csproj" />
+    <ProjectReference Include="..\HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,0 +1,24 @@
+﻿CREATE TABLE IF NOT EXISTS Device(
+    Id INTEGER,
+    Location VARCHAR (256),
+    HeliumName VARCHAR (256),
+    IsActive BOOL (256),
+    RegisterDate DATE,
+    LastLifeSignal DATE,
+    LastBootup DATE,
+    LastShutDown DATE
+    PRIMARY KEY(
+        Id ASC
+    )
+);
+
+CREATE TABLE IF NOT EXISTS EnergyStatus(
+    Id INTEGER,
+    DeviceId INTEGER,
+    Voltage FLOAT,
+    VoltagePercent FLOAT,
+    MeasureTime DATE
+    PRIMARY KEY(
+        Id ASC
+    )
+);
