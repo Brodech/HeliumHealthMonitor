@@ -1,4 +1,25 @@
-﻿CREATE TABLE IF NOT EXISTS Device(
+﻿CREATE DATABASE `dev_heliumhealthmonitor` /*!40100 COLLATE 'utf8mb3_general_ci' */;
+
+CREATE TABLE `devices` (
+	`Id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`Location` VARCHAR(50) NULL DEFAULT '' COLLATE 'utf8mb3_general_ci',
+	`HeliumName` VARCHAR(50) NULL DEFAULT '' COLLATE 'utf8mb3_general_ci',
+	`IsActive` TINYINT(4) NULL DEFAULT NULL,
+	`RegisterDate` DATETIME NULL DEFAULT NULL,
+	`LastLifeSignal` DATETIME NULL DEFAULT NULL,
+	`LastBootup` DATETIME NULL DEFAULT NULL,
+	`LastShutDown` DATETIME NULL DEFAULT NULL,
+	INDEX `Id` (`Id`) USING BTREE
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1
+;
+
+INSERT INTO `dev_heliumhealthmonitor`.`devices` (`Id`, `Location`, `HeliumName`, `IsActive`, `RegisterDate`, `LastLifeSignal`, `LastBootup`, `LastShutDown`) VALUES ('1', 'west', 'Miner1', '1', '2022-02-11 22:58:31', '2022-02-11 22:58:32', '2022-02-11 22:58:33', '2022-02-11 22:58:37');
+
+_______________________________________________________________________-
+CREATE TABLE IF NOT EXISTS Device(
     Id INTEGER,
     Location VARCHAR (256),
     HeliumName VARCHAR (256),

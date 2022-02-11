@@ -10,7 +10,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
 
-builder.Services.AddScoped<IDBConnection, DBConnection>();
+builder.Services.AddSingleton<IDBConnection, DBConnection>();
 
 var app = builder.Build();
 

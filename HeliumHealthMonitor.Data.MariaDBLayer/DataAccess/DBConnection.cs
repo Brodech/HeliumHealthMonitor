@@ -13,21 +13,21 @@ public class DBConnection : IDBConnection
 
     static readonly string SelectAllDevices = "SELECT * FROM Device;";
 
-    public List<T> LoadData<T, U>(string sql, U parameters, string connectionString)
+    public async Task<List<T>> LoadData<T, U>(string sql, U parameters, string connectionString)
     {
         using (IDbConnection connection = new MySqlConnection(connectionString))
         {
-            List<T> rows = connection.Query<T>(sql, parameters).ToList();
+            var rows = await connection.QueryAsync<T>(sql, parameters);
 
-            return rows;
+            return rows.ToList();
         }
     }
 
-    public void SavedData<T>(string sql, T parameters, string connectionString)
+    public Task SaveData<T>(string sql, T parameters, string connectionString)
     {
         using (IDbConnection connection = new MySqlConnection(connectionString))
         {
-            connection.Execute(sql, parameters);
+            return connection.ExecuteAsync(sql, parameters);
         }
     }
 }

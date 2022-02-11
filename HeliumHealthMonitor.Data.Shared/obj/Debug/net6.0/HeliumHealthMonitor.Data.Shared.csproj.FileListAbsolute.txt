@@ -1,0 +1,12 @@
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.deps.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\bin\Debug\net6.0\ref\HeliumHealthMonitor.Data.Shared.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.csproj.AssemblyReference.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.GeneratedMSBuildEditorConfig.editorconfig
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.AssemblyInfoInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.AssemblyInfo.cs
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.csproj.CoreCompileInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\ref\HeliumHealthMonitor.Data.Shared.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.Shared\obj\Debug\net6.0\HeliumHealthMonitor.Data.Shared.pdb

@@ -1,5 +1,38 @@
-﻿<h3>Devices</h3>
+﻿@page "/devices"
 
+<PageTitle>Devices</PageTitle>
+
+@using HeliumHealthMonitor.Data.MariaDBLayer.DataAccess
+@using HeliumHealthMonitor.Data.Shared.Models
+@inject IDBConnection _dbConnection
+@inject IConfiguration _config
+<h3>Devices</h3>
+
+<button class="btn btn-primary" @onclick="InsertData">Insert</button>
+
+@if (devices == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    foreach(var d in devices)
+    {
+        <p>@d.HeliumName</p>
+    }
+}
 @code {
+    List<DeviceModel> devices;
 
+    private async Task InsertData()
+    {
+        string sql = "INSERT INTO `dev_heliumhealthmonitor`.`devices` (`Id`, `Location`, `HeliumName`, `IsActive`, `RegisterDate`, `LastLifeSignal`, `LastBootup`, `LastShutDown`) VALUES ('1', 'west', @HeliumName, '1', '2022-02-11 22:58:31', '2022-02-11 22:58:32', '2022-02-11 22:58:33', '2022-02-11 22:58:37');";
+        await _dbConnection.SaveData(sql, new{ HeliumName = "New Miner"}, _config.GetConnectionString("default"));
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        string sql = "select * from devices";
+        devices = await _dbConnection.LoadData<DeviceModel, dynamic>(sql, new{}, _config.GetConnectionString("default"));
+    }
 }

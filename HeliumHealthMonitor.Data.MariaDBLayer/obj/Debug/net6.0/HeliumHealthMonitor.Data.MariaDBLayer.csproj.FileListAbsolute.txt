@@ -1,0 +1,12 @@
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.deps.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\bin\Debug\net6.0\ref\HeliumHealthMonitor.Data.MariaDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.csproj.AssemblyReference.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.GeneratedMSBuildEditorConfig.editorconfig
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.AssemblyInfoInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.AssemblyInfo.cs
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.csproj.CoreCompileInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\ref\HeliumHealthMonitor.Data.MariaDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MariaDBLayer.pdb
