@@ -13,10 +13,22 @@ CREATE TABLE `devices` (
 )
 COLLATE='utf8mb3_general_ci'
 ENGINE=InnoDB
-AUTO_INCREMENT=1
 ;
+ALTER TABLE `devices`
+	CHANGE COLUMN `Id` `Id` INT(10) UNSIGNED NULL AUTO_INCREMENT FIRST;
+
 
 INSERT INTO `dev_heliumhealthmonitor`.`devices` (`Id`, `Location`, `HeliumName`, `IsActive`, `RegisterDate`, `LastLifeSignal`, `LastBootup`, `LastShutDown`) VALUES ('1', 'west', 'Miner1', '1', '2022-02-11 22:58:31', '2022-02-11 22:58:32', '2022-02-11 22:58:33', '2022-02-11 22:58:37');
+
+SELECT * FROM `dev_heliumhealthmonitor`.`devices` ORDER BY `LastShutDown` DESC, `Id` DESC LIMIT 1000;
+
+INSERT INTO `dev_heliumhealthmonitor`.`devices` (`Id`, `Location`, `HeliumName`, `IsActive`, `RegisterDate`, `LastLifeSignal`, `LastBootup`, `LastShutDown`) VALUES ('1', 'east', 'Miner 1', '1', '2022-02-12 09:50:10', '2022-02-12 09:50:11', '2022-02-12 09:50:12', '2022-02-12 09:50:17');
+
+CREATE USER 'devuser'@'localhost' IDENTIFIED BY '12345678';
+GRANT EXECUTE, PROCESS, SELECT, SHOW DATABASES, SHOW VIEW, ALTER, ALTER ROUTINE, CREATE, CREATE ROUTINE, CREATE TABLESPACE, CREATE TEMPORARY TABLES, CREATE VIEW, DELETE, DROP, EVENT, INDEX, INSERT, REFERENCES, TRIGGER, UPDATE, BINLOG ADMIN, BINLOG REPLAY, CONNECTION ADMIN, CREATE USER, FEDERATED ADMIN, FILE, LOCK TABLES, READ_ONLY ADMIN, RELOAD, REPLICATION MASTER ADMIN, REPLICATION SLAVE, REPLICATION SLAVE ADMIN, SET USER, SHUTDOWN, SUPER  ON *.* TO 'devuser'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'devuser'@'localhost';
+
 
 _______________________________________________________________________-
 CREATE TABLE IF NOT EXISTS Device(

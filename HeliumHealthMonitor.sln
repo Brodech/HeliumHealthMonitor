@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Shared", "HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj", "{C1581749-E211-4A73-BD95-19AD4AC0DC76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliumHealthMonitor.Data.MongoDBLayer", "HeliumHealthMonitor.Data.MongoDBLayer\HeliumHealthMonitor.Data.MongoDBLayer.csproj", "{06D0AD4B-FEBD-4027-AD43-2AB1937FD5A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C1581749-E211-4A73-BD95-19AD4AC0DC76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1581749-E211-4A73-BD95-19AD4AC0DC76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1581749-E211-4A73-BD95-19AD4AC0DC76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06D0AD4B-FEBD-4027-AD43-2AB1937FD5A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06D0AD4B-FEBD-4027-AD43-2AB1937FD5A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06D0AD4B-FEBD-4027-AD43-2AB1937FD5A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06D0AD4B-FEBD-4027-AD43-2AB1937FD5A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
