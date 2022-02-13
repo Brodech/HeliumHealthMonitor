@@ -13,3 +13,18 @@ P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\ref\HeliumHealthMonitor.Data.MongoDBLayer.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.deps.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\ref\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.csproj.AssemblyReference.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.GeneratedMSBuildEditorConfig.editorconfig
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.AssemblyInfoInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.AssemblyInfo.cs
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.csproj.CoreCompileInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.csproj.CopyComplete
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\ref\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.pdb

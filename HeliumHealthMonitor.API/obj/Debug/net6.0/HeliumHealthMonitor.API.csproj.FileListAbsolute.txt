@@ -74,3 +74,39 @@ P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHeal
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\ref\HeliumHealthMonitor.API.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.pdb
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.genruntimeconfig.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\appsettings.Development.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\appsettings.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.API.staticwebassets.runtime.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.API.exe
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.API.deps.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.API.runtimeconfig.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.API.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\ref\HeliumHealthMonitor.API.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.API.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.csproj.AssemblyReference.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.Properties.Resources.resources
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.csproj.GenerateResource.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.GeneratedMSBuildEditorConfig.editorconfig
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.AssemblyInfoInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.AssemblyInfo.cs
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.csproj.CoreCompileInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.MvcApplicationPartsAssemblyInfo.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.RazorAssemblyInfo.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.RazorAssemblyInfo.cs
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\staticwebassets.build.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\staticwebassets.development.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\scopedcss\bundle\HeliumHealthMonitor.API.styles.css
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\scopedcss\projectbundle\HeliumHealthMonitor.API.bundle.scp.css
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.csproj.CopyComplete
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\ref\HeliumHealthMonitor.API.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.API.genruntimeconfig.cache

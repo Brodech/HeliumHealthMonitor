@@ -2,11 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 
@@ -14,49 +11,50 @@ namespace HeliumHealthMonitor.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LoginController : ControllerBase
+    public class DeviceLoginController : ControllerBase
     {
         private IConfiguration _config;
 
-        public LoginController(IConfiguration config)
+        public DeviceLoginController(IConfiguration config)
         {
             _config = config;
         }
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult Login([FromBody] UserLogin userLogin)
+        public IActionResult Login([FromBody] DeviceLogin deviceLogin)
         {
-            var user = Authenticate(userLogin);
+            var device = Authenticate(deviceLogin);
 
-            if(user != null)
+            if (device != null)
             {
-                var token = Generate(user);
+                var token = Generate(device);
                 return Ok(token);
             }
 
-            return NotFound("User not found");
+            return NotFound("Device not found");
         }
 
-        private UserModel Authenticate(UserLogin userLogin)
+        private DeviceModel Authenticate(DeviceLogin deviceLogin)
         {
-            var currentUser = UserConstants.Users.FirstOrDefault(o => o.Username.ToLower() ==
-            userLogin.Username.ToLower() && o.Password == userLogin.Password);
+            var currentDevice = DeviceConstants.Devices.FirstOrDefault(d => d.Macaddress.ToLower() ==
+            deviceLogin.Macaddress.ToLower() && d.Password == deviceLogin.Password);
 
-            if (currentUser != null) return currentUser;
+            if (currentDevice != null) return currentDevice;
 
             return null;
         }
 
-        private string Generate(UserModel user)
+        private string Generate(DeviceModel device)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new[]
             {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.GivenName, user.Username),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.NameIdentifier, device.Id.ToString()),
+                new Claim(ClaimTypes.Name, device.HeliumName),
+                new Claim(ClaimTypes.SerialNumber, device.Macaddress),
+                new Claim(ClaimTypes.Role, device.Role)
             };
             var token = new JwtSecurityToken(_config["Jwt:Issuer"],
                 _config["Jwt:Audience"],

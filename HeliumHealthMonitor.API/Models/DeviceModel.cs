@@ -1,4 +1,4 @@
-﻿namespace HeliumHealthMonitor.Data.Shared.Models;
+﻿namespace HeliumHealthMonitor.API.Models;
 
 public class DeviceModel
 {

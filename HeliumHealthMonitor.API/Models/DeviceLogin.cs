@@ -1,8 +1,8 @@
 ﻿namespace HeliumHealthMonitor.API.Models
 {
-    public class UserLogin
+    public class DeviceLogin
     {
-        public string Username { get; set; }
+        public string Macaddress { get; set; }
         public string Password { get; set; }
     }
 }
