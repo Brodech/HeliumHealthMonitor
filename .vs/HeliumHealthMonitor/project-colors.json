@@ -25,7 +25,17 @@
       "ProjectGuid": "06d0ad4b-febd-4027-ad43-2ab1937fd5a4",
       "DisplayName": "HeliumHealthMonitor.Data.MongoDBLayer",
       "ColorIndex": 3
+    },
+    "24f44d78-85a3-4365-836e-01ed8441e05a": {
+      "ProjectGuid": "24f44d78-85a3-4365-836e-01ed8441e05a",
+      "DisplayName": "HeliumHealthMonitor.API",
+      "ColorIndex": 4
+    },
+    "d6deccdd-141f-47ed-a596-b9df743ff89e": {
+      "ProjectGuid": "d6deccdd-141f-47ed-a596-b9df743ff89e",
+      "DisplayName": "ApiDemo_JwtApp",
+      "ColorIndex": 5
     }
   },
-  "NextColorIndex": 4
+  "NextColorIndex": 6
 }

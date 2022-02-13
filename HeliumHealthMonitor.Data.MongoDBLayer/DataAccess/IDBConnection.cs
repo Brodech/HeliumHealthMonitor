@@ -1,9 +1,17 @@
-﻿
+﻿using HeliumHealthMonitor.Data.Shared.Models;
+using MongoDB.Driver;
+
 namespace HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
 {
     public interface IDBConnection
     {
-        Task<List<T>> LoadData<T, U>(string sql, U parameters, string connectionString);
-        Task SaveData<T>(string sql, T parameters, string connectionString);
+        MongoClient Client { get; }
+        string DbName { get; }
+        IMongoCollection<DeviceModel> DeviceCollection { get; }
+        string DeviceCollectionName { get; }
+        IMongoCollection<EnergyStatusModel> EnergyStatusCollection { get; }
+        string EnergyStatusCollectionName { get; }
+        IMongoCollection<UserModel> UserCollection { get; }
+        string UserCollectionName { get; }
     }
 }

@@ -1,0 +1,15 @@
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.csproj.AssemblyReference.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.GeneratedMSBuildEditorConfig.editorconfig
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.AssemblyInfoInputs.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.AssemblyInfo.cs
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.csproj.CoreCompileInputs.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.deps.json
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\ref\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.pdb
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.pdb
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.csproj.CopyComplete
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\ref\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MongoDBLayer\obj\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.pdb

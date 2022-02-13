@@ -2,13 +2,13 @@
 
 <PageTitle>Devices</PageTitle>
 
-@using HeliumHealthMonitor.Data.MariaDBLayer.DataAccess
+@using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
 @using HeliumHealthMonitor.Data.Shared.Models
 @inject IDBConnection _dbConnection
 @inject IConfiguration _config
 <h3>Devices</h3>
 
-<button class="btn btn-primary" @onclick="InsertData">Insert</button>
+@*<button class="btn btn-primary" @onclick="InsertData">Insert</button>
 
 @if (devices == null)
 {
@@ -36,3 +36,4 @@ else
         devices = await _dbConnection.LoadData<DeviceModel, dynamic>(sql, new{}, _config.GetConnectionString("default"));
     }
 }
+*@
