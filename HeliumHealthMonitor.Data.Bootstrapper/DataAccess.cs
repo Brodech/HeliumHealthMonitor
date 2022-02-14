@@ -32,6 +32,11 @@ namespace HeliumHealthMonitor.Data.Bootstrapper
             return DeviceCollection.InsertOneAsync(device);
         }
 
+        private Task CreateEnergyStatus(EnergyStatusModel status)
+        {
+            return EnergyStatusCollection.InsertOneAsync(status);
+        }
+
         public async Task Initialize()
         {
             var devices = new List<DeviceModel>()
@@ -66,6 +71,22 @@ namespace HeliumHealthMonitor.Data.Bootstrapper
             {
                 await CreateDevice(device);
             }
+            // ----------- EnergyStatus
+
+            var energyStatus = new List<EnergyStatusModel>()
+            {
+                new EnergyStatusModel() {
+                    DeviceId = (await GetAllDevices()).FirstOrDefault().Id,
+                    Voltage = "4.96",
+                    VoltagePercent  = "60",
+                    MeasureTime = DateTime.UtcNow
+                }
+            };
+
+            foreach (var status in energyStatus)
+            {
+                await CreateEnergyStatus(status);
+            }
         }
 
         private async Task DropCollection(string collection)
@@ -76,6 +97,12 @@ namespace HeliumHealthMonitor.Data.Bootstrapper
         public async Task DropAll()
         {
             await DropCollection(DeviceCollectionName);
+            await DropCollection(EnergyStatusCollectionName);
+        }
+        private async Task<List<DeviceModel>> GetAllDevices()
+        {
+            var results = await DeviceCollection.FindAsync(_ => true);
+            return results.ToList();
         }
 
     }

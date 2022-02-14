@@ -1,11 +1,10 @@
-﻿using System;
-using HeliumHealthMonitor.API.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using HeliumHealthMonitor.Data.Shared.Models;
 
-namespace HeliumHealthMonitor.API.Controllers
+namespace HeliumHealthMonitor.Presentation.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -30,7 +29,7 @@ namespace HeliumHealthMonitor.API.Controllers
 
                 return new DeviceModel()
                 {
-                    Id = Convert.ToInt32(deviceClaims.FirstOrDefault(d => d.Type == ClaimTypes.NameIdentifier)?.Value),
+                    Id = deviceClaims.FirstOrDefault(d => d.Type == ClaimTypes.NameIdentifier)?.Value,
                     HeliumName = deviceClaims.FirstOrDefault(d => d.Type == ClaimTypes.Name)?.Value,
                     Macaddress = deviceClaims.FirstOrDefault(o => o.Type == ClaimTypes.SerialNumber)?.Value
 

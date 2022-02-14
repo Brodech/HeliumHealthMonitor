@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.UI", "HeliumHealthMonitor.UI\HeliumHealthMonitor.UI.csproj", "{89E120B8-E851-439D-AA48-88F5230538F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Presentation.UI", "HeliumHealthMonitor.UI\HeliumHealthMonitor.Presentation.UI.csproj", "{89E120B8-E851-439D-AA48-88F5230538F0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.MariaDBLayer", "HeliumHealthMonitor.Data.MariaDBLayer\HeliumHealthMonitor.Data.MariaDBLayer.csproj", "{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.MongoDBLayer", "HeliumHealthMonitor.Data.MongoDBLayer\HeliumHealthMonitor.Data.MongoDBLayer.csproj", "{06D0AD4B-FEBD-4027-AD43-2AB1937FD5A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.API", "HeliumHealthMonitor.API\HeliumHealthMonitor.API.csproj", "{24F44D78-85A3-4365-836E-01ED8441E05A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Presentation.API", "HeliumHealthMonitor.API\HeliumHealthMonitor.Presentation.API.csproj", "{24F44D78-85A3-4365-836E-01ED8441E05A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Bootstrapper", "HeliumHealthMonitor.Data.Bootstrapper\HeliumHealthMonitor.Data.Bootstrapper.csproj", "{2D71B75A-8E15-4C83-803D-0291F586C007}"
 EndProject

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/LzQvuou2aq5UGh/kiy6o43GU3Lz7BnyJ5B2SaOuJCIauDj22AA8uh1eoA/MiOGEIL0Q98Trz/IZMl0DQfvOnw==",
+  "dgSpecHash": "BW6QWl4q+PJxWPfVJlavUxREHe3k/Z212qj8QEdFts5E+L/+j0ubHkQ1YNKtCvBnDHjABgkn28BPELi9ZU+chQ==",
   "success": true,
-  "projectFilePath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\HeliumHealthMonitor.UI.csproj",
+  "projectFilePath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\HeliumHealthMonitor.Presentation.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Brodech\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",

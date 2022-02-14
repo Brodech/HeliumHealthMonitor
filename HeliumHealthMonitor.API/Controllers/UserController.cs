@@ -1,10 +1,10 @@
 ﻿using System;
-using HeliumHealthMonitor.API.Models;
+using HeliumHealthMonitor.Presentation.API.Models;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HeliumHealthMonitor.API.Controllers
+namespace HeliumHealthMonitor.Presentation.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

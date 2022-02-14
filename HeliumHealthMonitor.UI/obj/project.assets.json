@@ -1291,9 +1291,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\HeliumHealthMonitor.UI.csproj",
-      "projectName": "HeliumHealthMonitor.UI",
-      "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\HeliumHealthMonitor.UI.csproj",
+      "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\HeliumHealthMonitor.Presentation.UI.csproj",
+      "projectName": "HeliumHealthMonitor.Presentation.UI",
+      "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\HeliumHealthMonitor.Presentation.UI.csproj",
       "packagesPath": "C:\\Users\\Brodech\\.nuget\\packages\\",
       "outputPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.UI\\obj\\",
       "projectStyle": "PackageReference",

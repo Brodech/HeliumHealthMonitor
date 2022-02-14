@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HeliumHealthMonitor.API.Models
+namespace HeliumHealthMonitor.Presentation.API.Models
 {
     public class UserConstants
     {

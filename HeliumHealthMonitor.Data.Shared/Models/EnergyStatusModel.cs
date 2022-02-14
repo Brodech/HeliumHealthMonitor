@@ -2,9 +2,11 @@
 
 public class EnergyStatusModel
 {
-    public int Id { get; set; }
-    public int DeviceId { get; set; }
-    public float Voltage { get; set; }
-    public float VoltagePercent { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public string DeviceId { get; set; }
+    public string Voltage { get; set; }
+    public string VoltagePercent { get; set; }
     public DateTime MeasureTime { get; set; }
 }

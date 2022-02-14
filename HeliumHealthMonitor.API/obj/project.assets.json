@@ -1667,9 +1667,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj",
-      "projectName": "HeliumHealthMonitor.API",
-      "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj",
+      "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.Presentation.API.csproj",
+      "projectName": "HeliumHealthMonitor.Presentation.API",
+      "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.Presentation.API.csproj",
       "packagesPath": "C:\\Users\\Brodech\\.nuget\\packages\\",
       "outputPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\obj\\",
       "projectStyle": "PackageReference",

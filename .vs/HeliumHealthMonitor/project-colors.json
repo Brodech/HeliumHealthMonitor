@@ -3,7 +3,7 @@
   "ProjectMap": {
     "89e120b8-e851-439d-aa48-88f5230538f0": {
       "ProjectGuid": "89e120b8-e851-439d-aa48-88f5230538f0",
-      "DisplayName": "HeliumHealthMonitor.UI",
+      "DisplayName": "HeliumHealthMonitor.Presentation.UI",
       "ColorIndex": 0
     },
     "e6b9e5fe-012e-4f32-8df1-6ac009bb6448": {
@@ -28,7 +28,7 @@
     },
     "24f44d78-85a3-4365-836e-01ed8441e05a": {
       "ProjectGuid": "24f44d78-85a3-4365-836e-01ed8441e05a",
-      "DisplayName": "HeliumHealthMonitor.API",
+      "DisplayName": "HeliumHealthMonitor.Presentation.API",
       "ColorIndex": 4
     },
     "d6deccdd-141f-47ed-a596-b9df743ff89e": {
