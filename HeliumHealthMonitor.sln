@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Presentation.UI", "HeliumHealthMonitor.UI\HeliumHealthMonitor.Presentation.UI.csproj", "{89E120B8-E851-439D-AA48-88F5230538F0}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.MariaDBLayer", "HeliumHealthMonitor.Data.MariaDBLayer\HeliumHealthMonitor.Data.MariaDBLayer.csproj", "{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Shared", "HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj", "{C1581749-E211-4A73-BD95-19AD4AC0DC76}"
@@ -15,16 +13,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Present
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Bootstrapper", "HeliumHealthMonitor.Data.Bootstrapper\HeliumHealthMonitor.Data.Bootstrapper.csproj", "{2D71B75A-8E15-4C83-803D-0291F586C007}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliumHealthMonitor.Presentation.UI", "HeliumHealthMonitor.Presentation.UI\HeliumHealthMonitor.Presentation.UI.csproj", "{2A2F63B2-FBC3-4299-B956-74ACB79706E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{89E120B8-E851-439D-AA48-88F5230538F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{89E120B8-E851-439D-AA48-88F5230538F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{89E120B8-E851-439D-AA48-88F5230538F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{89E120B8-E851-439D-AA48-88F5230538F0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6B9E5FE-012E-4F32-8DF1-6AC009BB6448}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{2D71B75A-8E15-4C83-803D-0291F586C007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D71B75A-8E15-4C83-803D-0291F586C007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D71B75A-8E15-4C83-803D-0291F586C007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

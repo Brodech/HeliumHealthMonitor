@@ -12,25 +12,13 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
     public class DeviceController : ControllerBase
     {
         private readonly IEnergyStatusDataAccess _energyStatusDataAccess;
+        private readonly IDeviceDataAccess _deviceDataAccess;
 
-        public DeviceController(IEnergyStatusDataAccess energyStatusDataAccess)
+        public DeviceController(IEnergyStatusDataAccess energyStatusDataAccess,
+                                IDeviceDataAccess deviceDataAccess)
         {
             _energyStatusDataAccess = energyStatusDataAccess;
-        }
-        [HttpGet("device")]
-        [Authorize(Roles = "Device")]
-        public IActionResult Devicendpoint()
-        {
-            try
-            {
-                var currentDevice = GetCurrentDevice();
-
-                return Ok($"Hi {currentDevice.HeliumName}, your Mac-Address is {currentDevice.Macaddress}");
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            _deviceDataAccess = deviceDataAccess;
         }
 
         [HttpPost("energystatus")]
@@ -39,13 +27,10 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
         {
             try
             {
-                await _energyStatusDataAccess.Create(new EnergyStatusModel()
-                {
-                    DeviceId = GetCurrentDevice().Id,
-                    Voltage = energyStatus.Voltage,
-                    VoltagePercent = energyStatus.VoltagePercent,
-                    MeasureTime = DateTime.UtcNow
-                });
+                var device = await _deviceDataAccess.Get(GetCurrentDevice().Id);
+                await SetLastLifeSignalFromDevice(device);
+                await InsertEnergyState(energyStatus);
+                await UpdateEnergyStatusFromDevice(device, energyStatus);
                 return Ok("Ok");
             }
             catch (Exception ex)
@@ -71,6 +56,54 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
                 };
             }
             return null;
+        }
+
+        private async Task InsertEnergyState(EnergyStatusModel energyStatus)
+        {
+            try
+            {
+                await _energyStatusDataAccess.Create(new EnergyStatusModel()
+                {
+                    DeviceId = GetCurrentDevice().Id,
+                    Voltage = energyStatus.Voltage,
+                    VoltagePercent = energyStatus.VoltagePercent,
+                    MeasureTime = DateTime.UtcNow
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private async Task UpdateEnergyStatusFromDevice(DeviceModel device, EnergyStatusModel energyStatus)
+        {
+            try
+            {
+                device.Voltage = energyStatus.Voltage;
+                device.VoltagePercent = energyStatus.VoltagePercent;
+                device.MeasureTime = DateTime.UtcNow;
+
+                await _deviceDataAccess.Update(device);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private async Task SetLastLifeSignalFromDevice(DeviceModel device)
+        {
+            try
+            {
+                device.LastLifeSignal = DateTime.UtcNow;
+
+                await _deviceDataAccess.Update(device);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

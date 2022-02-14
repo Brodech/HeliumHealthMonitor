@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace HeliumHealthMonitor.API;
+namespace HeliumHealthMonitor.Presentation.API;
 
 public static class RegisterServices
 {
@@ -30,7 +30,7 @@ public static class RegisterServices
         builder.Services.AddRazorPages();
 
         builder.Services.AddSingleton<IDBConnection, DBConnection>();
-        builder.Services.AddSingleton<IDeviceDataAccess, DeviceDataAccess>();
-        builder.Services.AddSingleton<IEnergyStatusDataAccess, EnergyStatusDataAccess>();
+        builder.Services.AddScoped<IDeviceDataAccess, DeviceDataAccess>();
+        builder.Services.AddScoped<IEnergyStatusDataAccess, EnergyStatusDataAccess>();
     }
 }

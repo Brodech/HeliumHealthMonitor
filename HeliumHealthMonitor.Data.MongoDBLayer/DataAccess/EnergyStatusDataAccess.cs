@@ -23,6 +23,11 @@ public class EnergyStatusDataAccess : IEnergyStatusDataAccess
         var result = (await _collection.FindAsync(c => c.Id == id)).FirstOrDefault();
         return result;
     }
+    public async Task<List<EnergyStatusModel>> GetAllFromDevice(string id)
+    {
+        var result = await _collection.FindAsync(c => c.DeviceId == id);
+        return result.ToList();
+    }
     public Task Update(EnergyStatusModel energyStatus)
     {
         var filter = Builders<EnergyStatusModel>.Filter.Eq("Id", energyStatus.Id);
@@ -31,7 +36,6 @@ public class EnergyStatusDataAccess : IEnergyStatusDataAccess
     public async Task Delete(EnergyStatusModel device)
     {
         await _collection.DeleteOneAsync(d => d.Id == device.Id);
-
     }
     private async Task DropCollection(string collection)
     {

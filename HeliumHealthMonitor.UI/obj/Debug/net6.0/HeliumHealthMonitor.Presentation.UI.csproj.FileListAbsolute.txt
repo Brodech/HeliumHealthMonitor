@@ -1,0 +1,8 @@
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.csproj.AssemblyReference.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.GeneratedMSBuildEditorConfig.editorconfig
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.AssemblyInfoInputs.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.AssemblyInfo.cs
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.csproj.CoreCompileInputs.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.MvcApplicationPartsAssemblyInfo.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.RazorAssemblyInfo.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.RazorAssemblyInfo.cs

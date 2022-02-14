@@ -11,6 +11,9 @@ public class DeviceModel
     public string Location { get; set; }
     public string HeliumName { get; set; }
     public bool IsActive { get; set; }
+    public string Voltage { get; set; }
+    public string VoltagePercent { get; set; }
+    public DateTime MeasureTime { get; set; }
     public DateTime RegisterDate { get; set; }
     public DateTime LastLifeSignal { get; set; }
     public DateTime LastBootup { get; set; }

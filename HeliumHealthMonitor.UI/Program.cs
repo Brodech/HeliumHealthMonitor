@@ -1,5 +1,5 @@
 using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
-using HeliumHealthMonitor.UI.Data;
+using HeliumHealthMonitor.Presentation.UI.Data;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 

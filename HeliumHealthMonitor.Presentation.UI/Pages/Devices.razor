@@ -1,0 +1,56 @@
+﻿@page "/devices"
+
+<PageTitle>Devices</PageTitle>
+
+@using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
+@using HeliumHealthMonitor.Data.Shared.Models
+@inject IDeviceDataAccess _deviceDataAccess;
+@inject IEnergyStatusDataAccess _enegryStatusDataAccess;
+@inject IConfiguration _config
+<h3>Devices</h3>
+
+@if (devices == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Miner Name</th>
+                <th>Ladestand</th>
+                <th>Spannung</th>
+                <th>Letzte Messung</th>
+                <th>Mac-Adresse</th>
+                <th>Aktion</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var d in devices)
+        {
+            <tr onclick="NavigateToDetailsPage">
+                <td>@d.HeliumName</td>
+                <td>@($"{d.VoltagePercent} %")</td>
+                <td>@($"{d.Voltage} V")</td>
+                <td>@d.MeasureTime.ToLocalTime().ToString("dd.MM.yyyy HH:mm:ss")</td>
+                <td>@d.Macaddress</td>
+                <td><a href=@($"/device-details/{d.Id}") class="btn btn-outline-primary">Details</a></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+    
+}
+@code {
+    List<DeviceModel> devices;
+    List<EnergyStatusModel> energyStatus;
+
+    protected override async Task OnInitializedAsync()
+    {
+        devices = await _deviceDataAccess.GetAll();
+
+        await base.OnInitializedAsync();
+    }
+}

@@ -1,0 +1,56 @@
+﻿@page "/device-details/{Id}"
+
+@using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
+@using HeliumHealthMonitor.Data.Shared.Models
+@inject IDeviceDataAccess _deviceDataAccess;
+@inject IEnergyStatusDataAccess _enegryStatusDataAccess;
+
+<h3>DeviceDetails</h3>
+
+@if(device == null || energyStatusList == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        <li>@($"Miner Name:     {device.HeliumName}")</li>
+        <li>@($"Mac-Address:    {device.Macaddress}")</li>
+        <li>@($"Standort:       {device.Location}")</li>
+        <li>@($"Spannung:       {device.Voltage} V")</li>
+        <li>@($"Ladestand:      {device.VoltagePercent} %")</li>
+        <li>@($"Registriert am: {device.RegisterDate}")</li>
+        <li>@($"Letzte Meldung: {device.LastLifeSignal}")</li>
+        <li>@($"Letzer Start:   {device.LastBootup}")</li>
+        <li>@($"Letzer Shutdown:{device.LastShutDown}")</li>
+        <li>@($"Letzte Messung: {device.MeasureTime}")</li>
+    </ul>
+}
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    DeviceModel device;
+    List<EnergyStatusModel> energyStatusList;
+    EnergyStatusModel latestStatus;
+
+    protected override async Task OnInitializedAsync()
+    {
+        device = await _deviceDataAccess.Get(Id);
+        energyStatusList = await _enegryStatusDataAccess.GetAllFromDevice(Id);
+        latestStatus = GetLatestEnergyStatus();
+
+        await base.OnInitializedAsync();
+    }
+
+    private EnergyStatusModel GetLatestEnergyStatus()
+    {
+        var status = energyStatusList.OrderBy(e => e.MeasureTime).First();
+        if(status == null)
+        {
+            return new EnergyStatusModel();
+        }
+        return status;
+    }
+}

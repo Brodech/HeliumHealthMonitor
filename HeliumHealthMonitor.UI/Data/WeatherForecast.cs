@@ -1,4 +1,4 @@
-namespace HeliumHealthMonitor.UI.Data
+namespace HeliumHealthMonitor.Presentation.UI.Data
 {
     public class WeatherForecast
     {
