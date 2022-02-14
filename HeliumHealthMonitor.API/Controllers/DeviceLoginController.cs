@@ -26,15 +26,23 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
         [HttpPost]
         public async Task<IActionResult> Login([FromBody] DeviceLoginModel deviceLogin)
         {
-            var device = await Authenticate(deviceLogin);
-
-            if (device != null)
+            try
             {
-                var token = Generate(device);
-                return Ok(token);
-            }
+                var device = await Authenticate(deviceLogin);
 
-            return NotFound("Device not found");
+                if (device != null)
+                {
+                    var token = Generate(device);
+                    return Ok(token);
+                }
+
+                return NotFound("Device not found");
+            }
+            catch (Exception ex)
+            {
+                return Problem(ex.Message);
+            }
+            
         }
 
         private async Task<DeviceModel> Authenticate(DeviceLoginModel deviceLogin)

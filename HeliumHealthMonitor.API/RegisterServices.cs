@@ -31,5 +31,6 @@ public static class RegisterServices
 
         builder.Services.AddSingleton<IDBConnection, DBConnection>();
         builder.Services.AddSingleton<IDeviceDataAccess, DeviceDataAccess>();
+        builder.Services.AddSingleton<IEnergyStatusDataAccess, EnergyStatusDataAccess>();
     }
 }
