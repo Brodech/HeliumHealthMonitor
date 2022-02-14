@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "FLoIc0c6x4mTYhtOcK76fir0kr4lDF1kBcjZr2UXN8iWMMOWhndA+it7iQIdjR3v8fknZvx5xJ4ILZSMUJKPrg==",
+  "success": false,
+  "projectFilePath": "P:\\repos\\HeliumHealthMonitor\\ERP.Data.Bootstrapper.CLI\\HeliumHealthMonitor.Data.Bootstrapper.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Das Projekt \"P:\\repos\\HeliumHealthMonitor\\ERP.Data.Bootstrapper\\ERP.Data.Bootstrapper.csproj\" wurde nicht gefunden. Stellen Sie sicher, dass der Projektverweis gültig und die Projektdatei vorhanden ist.",
+      "libraryId": "P:\\repos\\HeliumHealthMonitor\\ERP.Data.Bootstrapper\\ERP.Data.Bootstrapper.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Das Projekt \"P:\\repos\\HeliumHealthMonitor\\ERP.Data.MongoDBLayer\\ERP.Data.MongoDBLayer.csproj\" wurde nicht gefunden. Stellen Sie sicher, dass der Projektverweis gültig und die Projektdatei vorhanden ist.",
+      "libraryId": "P:\\repos\\HeliumHealthMonitor\\ERP.Data.MongoDBLayer\\ERP.Data.MongoDBLayer.csproj",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

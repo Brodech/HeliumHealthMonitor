@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.API", "HeliumHealthMonitor.API\HeliumHealthMonitor.API.csproj", "{24F44D78-85A3-4365-836E-01ED8441E05A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Bootstrapper", "HeliumHealthMonitor.Data.Bootstrapper\HeliumHealthMonitor.Data.Bootstrapper.csproj", "{2D71B75A-8E15-4C83-803D-0291F586C007}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{24F44D78-85A3-4365-836E-01ED8441E05A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24F44D78-85A3-4365-836E-01ED8441E05A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24F44D78-85A3-4365-836E-01ED8441E05A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D71B75A-8E15-4C83-803D-0291F586C007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D71B75A-8E15-4C83-803D-0291F586C007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D71B75A-8E15-4C83-803D-0291F586C007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D71B75A-8E15-4C83-803D-0291F586C007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

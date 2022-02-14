@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj": {}
+    "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj": {}
   },
   "projects": {
-    "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj": {
+    "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj",
+        "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj",
         "projectName": "HeliumHealthMonitor.API",
-        "projectPath": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj",
-        "packagesPath": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\",
-        "outputPath": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\obj\\",
+        "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.API.csproj",
+        "packagesPath": "C:\\Users\\Brodech\\.nuget\\packages\\",
+        "outputPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Benjamin Mell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Brodech\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
@@ -28,12 +28,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\HeliumHealthMonitor.Data.MongoDBLayer.csproj": {
+                "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\HeliumHealthMonitor.Data.MongoDBLayer.csproj"
+              },
+              "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj": {
+                "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -73,6 +80,154 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\HeliumHealthMonitor.Data.MongoDBLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\HeliumHealthMonitor.Data.MongoDBLayer.csproj",
+        "projectName": "HeliumHealthMonitor.Data.MongoDBLayer",
+        "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\HeliumHealthMonitor.Data.MongoDBLayer.csproj",
+        "packagesPath": "C:\\Users\\Brodech\\.nuget\\packages\\",
+        "outputPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Brodech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj": {
+                "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.28, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj",
+        "projectName": "HeliumHealthMonitor.Data.Shared",
+        "projectPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj",
+        "packagesPath": "C:\\Users\\Brodech\\.nuget\\packages\\",
+        "outputPath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Brodech\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.14.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

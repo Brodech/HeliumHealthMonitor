@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ERP.Data.Bootstrapper.CLI": {
+      "commandName": "Project",
+      "commandLineArgs": "mongodb+srv://cyberuser001:epPHncuPxpPjt8KVnCGoYFhwcmHho6BF@cluster0.viy9h.mongodb.net/test?authSource=admin&replicaSet=atlas-ue1yd4-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+    }
+  }
+}

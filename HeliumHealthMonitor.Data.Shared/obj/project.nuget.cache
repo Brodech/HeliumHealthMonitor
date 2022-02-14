@@ -1,8 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "cVwEAdT2eKdHDOzuXzDS79VxMEu2SHhGEmTYq9mjWr5syekQhX7l2GYj33Mf+TMEEUiIDp524OvmSBa0Gzy3iA==",
+  "dgSpecHash": "KD27kF02zKlPkn8VVuNCsRhdsh19kP7YBd7t928G06sj6JTP5DpGd5Y0/ZHQd/4oRargumV3iyq1kGtJCXTN0w==",
   "success": true,
-  "projectFilePath": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.Shared\\HeliumHealthMonitor.Data.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Brodech\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\mongodb.bson\\2.14.1\\mongodb.bson.2.14.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\mongodb.driver\\2.14.1\\mongodb.driver.2.14.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\mongodb.driver.core\\2.14.1\\mongodb.driver.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\mongodb.libmongocrypt\\1.3.0\\mongodb.libmongocrypt.1.3.0.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

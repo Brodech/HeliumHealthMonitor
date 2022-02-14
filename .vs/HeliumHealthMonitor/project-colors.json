@@ -35,7 +35,17 @@
       "ProjectGuid": "d6deccdd-141f-47ed-a596-b9df743ff89e",
       "DisplayName": "ApiDemo_JwtApp",
       "ColorIndex": 5
+    },
+    "6f8f020c-b51e-4742-9a39-90e2c160be6b": {
+      "ProjectGuid": "6f8f020c-b51e-4742-9a39-90e2c160be6b",
+      "DisplayName": "HeliumHealthMonitor.Data.Bootstrapper",
+      "ColorIndex": 6
+    },
+    "2d71b75a-8e15-4c83-803d-0291f586c007": {
+      "ProjectGuid": "2d71b75a-8e15-4c83-803d-0291f586c007",
+      "DisplayName": "HeliumHealthMonitor.Data.Bootstrapper",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 6
+  "NextColorIndex": 8
 }

@@ -365,6 +365,9 @@
         }
       },
       "HeliumHealthMonitor.Data.Shared/1.0.0": {
+        "dependencies": {
+          "MongoDB.Driver": "2.14.1"
+        },
         "runtime": {
           "HeliumHealthMonitor.Data.Shared.dll": {}
         }

@@ -2,7 +2,9 @@
 
 public class DeviceModel
 {
-    public int Id { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
     public string Macaddress { get; set; }
     public string Password { get; set; }
     public string Role { get; set; }
