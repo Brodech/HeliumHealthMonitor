@@ -1,4 +1,5 @@
-﻿namespace HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
+﻿
+namespace HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
 
 public class EnergyStatusDataAccess : IEnergyStatusDataAccess
 {

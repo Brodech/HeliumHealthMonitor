@@ -50,7 +50,22 @@
       "ProjectGuid": "2a2f63b2-fbc3-4299-b956-74acb79706e1",
       "DisplayName": "HeliumHealthMonitor.Presentation.UI",
       "ColorIndex": 8
+    },
+    "43d4f982-5208-425b-8821-f69b3f0d3618": {
+      "ProjectGuid": "43d4f982-5208-425b-8821-f69b3f0d3618",
+      "DisplayName": "HeliumHealthMonitor.BusinessLogic.Authentication",
+      "ColorIndex": 9
+    },
+    "0ab97b0e-4482-42be-9422-f6b496bcbb34": {
+      "ProjectGuid": "0ab97b0e-4482-42be-9422-f6b496bcbb34",
+      "DisplayName": "HeliumHealthMonitor.Presentation.WebUI",
+      "ColorIndex": 10
+    },
+    "853068f6-2dc6-4e38-bd5f-4b7f7e5463b4": {
+      "ProjectGuid": "853068f6-2dc6-4e38-bd5f-4b7f7e5463b4",
+      "DisplayName": "HeliumHealthMonitor.Presentation.WebUI",
+      "ColorIndex": 11
     }
   },
-  "NextColorIndex": 9
+  "NextColorIndex": 12
 }

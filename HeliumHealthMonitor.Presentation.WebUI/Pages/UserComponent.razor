@@ -1,0 +1,22 @@
+﻿@using HeliumHealthMonitor.Data.Shared.Models
+@inject IUserSessionInfo _userSessionInfo
+
+<p>
+    @if (string.IsNullOrEmpty(username))
+    {
+        <span><a href="/register">Register</a><a href="/login">Login</a></span>
+    }
+    else
+    {
+        <sopan>Hello, @username <a href="/logout">(Logout)</a></sopan>
+    }
+</p>
+@code {
+    string username = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        username = _userSessionInfo.Username;
+    }
+}

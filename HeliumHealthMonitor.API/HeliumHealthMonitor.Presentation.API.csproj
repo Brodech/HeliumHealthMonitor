@@ -16,6 +16,7 @@
 
 
 	<ItemGroup>
+	  <ProjectReference Include="..\HeliumHealthMonitor.BusinessLogic.Authentication\HeliumHealthMonitor.BusinessLogic.Authentication.csproj" />
 	  <ProjectReference Include="..\HeliumHealthMonitor.Data.MongoDBLayer\HeliumHealthMonitor.Data.MongoDBLayer.csproj" />
 	  <ProjectReference Include="..\HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj" />
 	</ItemGroup>

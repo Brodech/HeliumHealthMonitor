@@ -74,3 +74,6 @@ P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHeal
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\ref\HeliumHealthMonitor.Presentation.API.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.API.pdb
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.API.genruntimeconfig.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\BCrypt.Net-Next.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.API\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.pdb

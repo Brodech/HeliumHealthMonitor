@@ -1,4 +1,5 @@
-﻿using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
+﻿using HeliumHealthMonitor.BusinessLogic.Authentication;
+using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
 using HeliumHealthMonitor.Data.Shared.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,20 +16,24 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
     {
         private readonly IConfiguration _config;
         private readonly IDeviceDataAccess _deviceDataAccess;
+        private readonly IAuthentication _authentication;
 
-        public DeviceLoginController(IConfiguration config, IDeviceDataAccess deviceDataAccess)
+        public DeviceLoginController(IConfiguration config,
+                                     IDeviceDataAccess deviceDataAccess,
+                                     IAuthentication authentication)
         {
             _config = config;
             _deviceDataAccess = deviceDataAccess;
+            _authentication = authentication;
         }
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] DeviceLoginModel deviceLogin)
+        public async Task<IActionResult> Login([FromBody] DeviceLoginModel credentials)
         {
             try
             {
-                var device = await Authenticate(deviceLogin);
+                var device = await _authentication.AuthenticateDevice(credentials);
 
                 if (device != null)
                 {
@@ -43,16 +48,6 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
                 return Problem(ex.Message);
             }
             
-        }
-
-        private async Task<DeviceModel> Authenticate(DeviceLoginModel deviceLogin)
-        {
-            var currentDevice = (await _deviceDataAccess.GetAll()).FirstOrDefault(d => d.Macaddress.ToLower() ==
-            deviceLogin.Macaddress.ToLower() && d.Password == deviceLogin.Password);
-
-            if (currentDevice != null) return currentDevice;
-
-            return null;
         }
 
         private string Generate(DeviceModel device)

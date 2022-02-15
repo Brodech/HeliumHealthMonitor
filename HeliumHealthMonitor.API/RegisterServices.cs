@@ -1,4 +1,5 @@
-﻿using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
+﻿using HeliumHealthMonitor.BusinessLogic.Authentication;
+using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -30,7 +31,10 @@ public static class RegisterServices
         builder.Services.AddRazorPages();
 
         builder.Services.AddSingleton<IDBConnection, DBConnection>();
+        builder.Services.AddScoped<IUserDataAccess, UserDataAccess>();
         builder.Services.AddScoped<IDeviceDataAccess, DeviceDataAccess>();
         builder.Services.AddScoped<IEnergyStatusDataAccess, EnergyStatusDataAccess>();
+
+        builder.Services.AddScoped<IAuthentication, Authentication>();
     }
 }

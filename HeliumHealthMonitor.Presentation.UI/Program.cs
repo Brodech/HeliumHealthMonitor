@@ -21,6 +21,12 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//app.UseAuthentication();
+
+//app.UseAuthorization();
+
+//app.MapDefaultControllerRoute();
+
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 

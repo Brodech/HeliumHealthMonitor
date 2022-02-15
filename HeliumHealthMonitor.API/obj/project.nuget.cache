@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "3jQ4vBjYbrpZ6Ww/olei+0iO/4LdGamnIokzUraID6FUlHOT8gk+WImQRuL21Ine89BGvKHDRzmk/XI+YA7aXQ==",
+  "dgSpecHash": "2Qjj69IbcQxS/Z3DKFVJldZOjXOknvwvyvcjIpx659Oq9oxzgcnRjBaGS4j8s5ybKBgOcjPjU2rwzEB135+JEQ==",
   "success": true,
   "projectFilePath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.API\\HeliumHealthMonitor.Presentation.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Brodech\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\bouncycastle.netcore\\1.8.5\\bouncycastle.netcore.1.8.5.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\dnsclient\\1.4.0\\dnsclient.1.4.0.nupkg.sha512",
@@ -29,6 +30,7 @@
     "C:\\Users\\Brodech\\.nuget\\packages\\mysql.data\\8.0.28\\mysql.data.8.0.28.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.1\\system.identitymodel.tokens.jwt.6.15.1.nupkg.sha512",

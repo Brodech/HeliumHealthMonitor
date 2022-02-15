@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "1NBIStakG1VPnvgAeY3QnksTXGHkMI9fBhGNkctytII=",
+  "Hash": "DwV0HOnbgZ94xPWmtlHpvBGOnRotOqa08F6wlinOfvs=",
   "Source": "HeliumHealthMonitor.Presentation.UI",
   "BasePath": "_content/HeliumHealthMonitor.Presentation.UI",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.UI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\HeliumHealthMonitor.Presentation.UI.styles.css",
       "SourceId": "HeliumHealthMonitor.Presentation.UI",

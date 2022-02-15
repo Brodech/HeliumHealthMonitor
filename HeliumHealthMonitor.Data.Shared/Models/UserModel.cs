@@ -2,8 +2,10 @@
 
 public class UserModel
 {
-    public int Id { get; set; }
-    public string UserName { get; set; }
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; set; }
+    public string Username { get; set; }
     public string Password { get; set; }
     public string Role { get; set; }
 }

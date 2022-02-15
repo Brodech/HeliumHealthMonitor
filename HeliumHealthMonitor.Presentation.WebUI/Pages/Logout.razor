@@ -1,0 +1,15 @@
+﻿@page "/logout"
+
+@using HeliumHealthMonitor.Data.Shared.Models
+@inject NavigationManager _navManager
+@inject IUserSessionInfo _userSessionInfo
+<h3>Logout</h3>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        _userSessionInfo.Clear();
+        _navManager.NavigateTo("/");
+    }
+}

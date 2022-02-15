@@ -66,3 +66,14 @@ P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\obj\Debug\net6.
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\obj\Debug\net6.0\ref\HeliumHealthMonitor.Presentation.UI.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.pdb
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\obj\Debug\net6.0\HeliumHealthMonitor.Presentation.UI.genruntimeconfig.cache
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\Microsoft.JSInterop.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\MudBlazor.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\System.IO.Pipelines.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\BCrypt.Net-Next.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.dll
+P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Presentation.UI\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.pdb

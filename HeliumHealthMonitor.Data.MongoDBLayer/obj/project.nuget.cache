@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/1HaSmxvSH2Y7YsZ+NKGWTZ6tcT/6Y68Lp47hqRhCuwixDcbpM3vY5zIUl/v000PyycAVcXXKas6ikeMHtjeMA==",
+  "dgSpecHash": "JtAOJBk9T95gjJfdAWQ9m/Ge4z76/6g1j42WNb3MhBA9cDZOJpXDvSHZISjKau7JUjGe7OQwLbCddXNQsrJgFA==",
   "success": true,
   "projectFilePath": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Data.MongoDBLayer\\HeliumHealthMonitor.Data.MongoDBLayer.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\Brodech\\.nuget\\packages\\mysql.data\\8.0.28\\mysql.data.8.0.28.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\Brodech\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
     "C:\\Users\\Brodech\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",

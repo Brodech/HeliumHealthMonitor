@@ -1,0 +1,58 @@
+﻿@page "/register"
+
+@using HeliumHealthMonitor.Data.Shared.Models
+@inject HttpClient Http
+@inject IConfiguration _config 
+
+<h3>Register</h3>
+<p>@message</p>
+<p><a href="/login">@login</a></p>
+
+<EditForm Model="reg" OnValidSubmit="OnValid" style="max-width:500px">
+    <DataAnnotationsValidator/>
+    <ValidSummary/>
+    <div class="mb-2">
+        <InputText class="form-control" @bind-Value="reg.Username" placeholder="Benutzername"></InputText>
+    </div>
+    <div class="mb-2">
+        <InputText class="password" @bind-Value="reg.Password" placeholder="Passwort"></InputText>
+    </div>
+    <div class="mb-2">
+        <InputText class="password" @bind-Value="reg.Password2" placeholder="Passwort wiederholen"></InputText>
+    </div>
+    <div class="mb-2 text-right">
+        <button class="btn btn-secondary" disabled="@isDisabled">register</button>
+    </div>
+</EditForm>
+
+
+
+@code {
+    UserRegistrationFormModel reg = new UserRegistrationFormModel();
+    string message = string.Empty;
+    string login = string.Empty;
+    bool isDisabled = false;
+
+    private async Task OnValid()
+    {
+        isDisabled = true;
+        using (var msg = await Http.PostAsJsonAsync<UserRegistrationFormModel>($"{_config["ApiBaseAddress"]}/api/userauth/register", reg,
+            System.Threading.CancellationToken.None))
+        {
+            if (msg.IsSuccessStatusCode)
+            {
+                UserLoginResult result = await msg.Content.ReadFromJsonAsync<UserLoginResult>();
+                message = result.Message;
+                if (result.Success)
+                {
+                    message += " Bitte einloggen um fortzufahren.";
+                    login = "Hier klicken zum Login.";
+                }
+                else
+                {
+                    isDisabled = false;
+                }
+            }
+        }
+    }
+}

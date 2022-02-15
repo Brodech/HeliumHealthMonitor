@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>2b616a25-27b3-4bad-8d20-ff767ed013a6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HeliumHealthMonitor.BusinessLogic.Authentication\HeliumHealthMonitor.BusinessLogic.Authentication.csproj" />
+    <ProjectReference Include="..\HeliumHealthMonitor.Data.MongoDBLayer\HeliumHealthMonitor.Data.MongoDBLayer.csproj" />
+    <ProjectReference Include="..\HeliumHealthMonitor.Data.Shared\HeliumHealthMonitor.Data.Shared.csproj" />
+  </ItemGroup>
+
+</Project>
