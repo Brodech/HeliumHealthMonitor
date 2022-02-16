@@ -41,6 +41,8 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
                     return new UserLoginResult()
                     {
                         Message = "Login successful.",
+                        Id = user.Id,
+                        Role = user.Role,
                         Username = user.Username,
                         JwtBearer = Generate(user),
                         Success = true

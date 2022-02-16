@@ -8,6 +8,7 @@ namespace HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
         Task DropAll();
         Task<UserModel> Get(string id);
         Task<List<UserModel>> GetAll();
+        Task<string> GetUserRole(string id);
         Task Update(UserModel user);
     }
 }

@@ -17,4 +17,7 @@ public class UserRegistrationFormModel
     [DataType(DataType.Password)]
     [Compare(nameof(Password), ErrorMessage = "Passwörter stimmen nicht überein.")]
     public string Password2 { get; set; }
+    [Required]
+    [DataType(DataType.Password)]
+    public string Otp { get; set; }
 }

@@ -1,8 +1,13 @@
 ﻿@page "/login"
+
 @using HeliumHealthMonitor.Data.Shared.Models
+@using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
 @inject HttpClient Http
 @inject IUserSessionInfo _userSessionInfo
 @inject IConfiguration _config 
+@inject IUserDataAccess _userDataAccess
+@inject NavigationManager _navManager
+
 <h3>Login</h3>
 
 <p>@message</p>
@@ -14,7 +19,7 @@
         <InputText class="form-control" @bind-Value="user.Username" placeholder="Benutzername"></InputText>
     </div>
     <div class="mb-2">
-        <InputText class="password" @bind-Value="user.Password" placeholder="Passwort"></InputText>
+        <InputText type="password" class="form-control" @bind-Value="user.Password" placeholder="Passwort"></InputText>
     </div>
     <div class="mb-2 text-right">
         <button class="btn btn-secondary" disabled="@isDisabled">login</button>
@@ -39,8 +44,13 @@
                 isDisabled = false;
                 if (result.Success)
                 {
+
+                    _userSessionInfo.Role = result.Role;
+                    _userSessionInfo.Id = result.Id;
                     _userSessionInfo.Username = result.Username;
                     _userSessionInfo.JwtBearer = result.JwtBearer;
+
+                    _navManager.NavigateTo("/devices");
                 }
             }
         }

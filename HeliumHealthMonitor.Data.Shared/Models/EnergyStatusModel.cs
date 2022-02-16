@@ -1,6 +1,6 @@
 ﻿namespace HeliumHealthMonitor.Data.Shared.Models;
 
-public class EnergyStatusModel
+public class EnergyStatusModel : IEnergyStatusModel
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]

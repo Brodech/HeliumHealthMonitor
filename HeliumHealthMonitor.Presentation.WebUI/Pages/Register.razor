@@ -10,15 +10,17 @@
 
 <EditForm Model="reg" OnValidSubmit="OnValid" style="max-width:500px">
     <DataAnnotationsValidator/>
-    <ValidSummary/>
     <div class="mb-2">
         <InputText class="form-control" @bind-Value="reg.Username" placeholder="Benutzername"></InputText>
     </div>
     <div class="mb-2">
-        <InputText class="password" @bind-Value="reg.Password" placeholder="Passwort"></InputText>
+        <InputText type="password" class="form-control" @bind-Value="reg.Password" placeholder="Passwort"></InputText>
     </div>
     <div class="mb-2">
-        <InputText class="password" @bind-Value="reg.Password2" placeholder="Passwort wiederholen"></InputText>
+        <InputText type="password" class="form-control" @bind-Value="reg.Password2" placeholder="Passwort wiederholen"></InputText>
+    </div>
+    <div class="mb-2">
+        <InputText class="form-control" @bind-Value="reg.Otp" placeholder="OTP"></InputText>
     </div>
     <div class="mb-2 text-right">
         <button class="btn btn-secondary" disabled="@isDisabled">register</button>

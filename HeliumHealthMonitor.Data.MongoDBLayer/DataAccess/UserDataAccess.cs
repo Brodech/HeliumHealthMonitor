@@ -23,6 +23,11 @@
             var result = (await _collection.FindAsync(c => c.Id == id)).FirstOrDefault();
             return result;
         }
+        public async Task<string> GetUserRole(string id)
+        {
+            var result = (await _collection.FindAsync(c => c.Id == id)).First();
+            return result.Role;
+        }
         public Task Update(UserModel user)
         {
             var filter = Builders<UserModel>.Filter.Eq("Id", user.Id);

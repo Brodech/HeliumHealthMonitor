@@ -32,33 +32,30 @@ public class Authentication : IAuthentication
 
     public async Task<UserModel> AuthenticateUser(UserLoginFormModel userLogin)
     {
-        var hashedpass = CreateHash(userLogin.Password);
         var username = userLogin.Username;
         var currentUser = (await _userDataAccess.GetAll()).FirstOrDefault(d => d.Username.ToLower() ==
-        username.ToLower() && d.Password == hashedpass);
+        username.ToLower());
 
-        //var currentUser = (await _userDataAccess.GetAll()).FirstOrDefault(d => d.Username.ToLower() ==
-        //userLogin.Username.ToLower() && d.Password == CreateHash(userLogin.Password));
-
-        if (currentUser != null) return currentUser;
+        if (currentUser != null && currentUser.Password == CreateHash(userLogin.Password, currentUser.Salt)) { return currentUser; }
 
         return null;
     }
 
     public Task RegisterUser(UserRegistrationFormModel userRegistration)
     {
+        var salt = GetSalt();
         var user = _userDataAccess.Create(new UserModel()
         {
             Username = userRegistration.Username,
-            Password = CreateHash(userRegistration.Password),
+            Salt = salt,
+            Password = CreateHash(userRegistration.Password, salt),
             Role = "User"
         });
         return user;
     }
 
-    private static string CreateHash(string password)
+    private static string CreateHash(string password, string salt = "")
     {
-        var salt = "lkjg9845kfdjgb456456dfgFD";
         var md5 = new HMACMD5(Encoding.UTF8.GetBytes(salt + password));
         byte[] data = md5.ComputeHash(Encoding.UTF8.GetBytes(password));
         password = string.Empty;
@@ -67,5 +64,10 @@ public class Authentication : IAuthentication
             password += x.ToString("X2");
         }
         return password;
+    }
+    private static string GetSalt()
+    {
+        var rand = new Random();
+        return CreateHash($"{rand.Next(1111, 9999)}{rand.Next(1111, 9999)}{rand.Next(1111, 9999)}{rand.Next(1111, 9999)}");
     }
 }

@@ -17,8 +17,10 @@ public static class RegisterServices
         builder.Services.AddSingleton<IDBConnection, DBConnection>();
         builder.Services.AddScoped<IUserDataAccess, UserDataAccess>();
         builder.Services.AddScoped<IDeviceDataAccess, DeviceDataAccess>();
+        builder.Services.AddScoped<IEnergyStatusDataAccess, EnergyStatusDataAccess>();
         builder.Services.AddScoped<IUserSessionInfo, UserSessionInfo>();
 
         builder.Services.AddScoped<IAuthentication, Authentication>();
+        builder.Services.AddScoped<IAuthorisation, Authorisation>();
     }
 }

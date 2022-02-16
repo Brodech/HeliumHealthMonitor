@@ -1,0 +1,48 @@
+﻿@page "/device-details/{Id}"
+
+@using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
+@using HeliumHealthMonitor.Data.Shared.Models
+@using HeliumHealthMonitor.BusinessLogic.Authentication
+@inject IDeviceDataAccess _deviceDataAccess;
+@inject IAuthorisation _authorisation;
+@inject IUserSessionInfo _userSessionInfo
+@inject NavigationManager _navManager;
+
+<h3>DeviceDetails</h3>
+
+@if(device == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <ul>
+        <li>@($"Miner Name:     {device.HeliumName}")</li>
+        <li>@($"Mac-Address:    {device.Macaddress}")</li>
+        <li>@($"Standort:       {device.Location}")</li>
+        <li>@($"Spannung:       {device.Voltage} V")</li>
+        <li>@($"Ladestand:      {device.VoltagePercent} %")</li>
+        <li>@($"Registriert am: {device.RegisterDate}")</li>
+        <li>@($"Letzte Meldung: {device.LastLifeSignal}")</li>
+        <li>@($"Letzer Start:   {device.LastBootup}")</li>
+        <li>@($"Letzer Shutdown:{device.LastShutDown}")</li>
+        <li>@($"Letzte Messung: {device.MeasureTime}")</li>
+    </ul>
+}
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+    bool isAuthorized;
+    DeviceModel device;
+
+    protected override async Task OnInitializedAsync()
+    {
+        isAuthorized = _authorisation.IsUserOrAdmin(_userSessionInfo);
+
+        if(!isAuthorized){ _navManager.NavigateTo("/"); }
+
+        device = await _deviceDataAccess.Get(Id);
+        await base.OnInitializedAsync();
+    }
+}

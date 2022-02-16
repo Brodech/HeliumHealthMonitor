@@ -13,11 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Present
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Data.Bootstrapper", "HeliumHealthMonitor.Data.Bootstrapper\HeliumHealthMonitor.Data.Bootstrapper.csproj", "{2D71B75A-8E15-4C83-803D-0291F586C007}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Presentation.UI", "HeliumHealthMonitor.Presentation.UI\HeliumHealthMonitor.Presentation.UI.csproj", "{2A2F63B2-FBC3-4299-B956-74ACB79706E1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.BusinessLogic.Authentication", "HeliumHealthMonitor.BusinessLogic.Authentication\HeliumHealthMonitor.BusinessLogic.Authentication.csproj", "{43D4F982-5208-425B-8821-F69B3F0D3618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeliumHealthMonitor.Presentation.WebUI", "HeliumHealthMonitor.Presentation.WebUI\HeliumHealthMonitor.Presentation.WebUI.csproj", "{853068F6-2DC6-4E38-BD5F-4B7F7E5463B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HeliumHealthMonitor.Presentation.WebUI", "HeliumHealthMonitor.Presentation.WebUI\HeliumHealthMonitor.Presentation.WebUI.csproj", "{853068F6-2DC6-4E38-BD5F-4B7F7E5463B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,10 +43,6 @@ Global
 		{2D71B75A-8E15-4C83-803D-0291F586C007}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D71B75A-8E15-4C83-803D-0291F586C007}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D71B75A-8E15-4C83-803D-0291F586C007}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A2F63B2-FBC3-4299-B956-74ACB79706E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43D4F982-5208-425B-8821-F69B3F0D3618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{43D4F982-5208-425B-8821-F69B3F0D3618}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43D4F982-5208-425B-8821-F69B3F0D3618}.Release|Any CPU.ActiveCfg = Release|Any CPU

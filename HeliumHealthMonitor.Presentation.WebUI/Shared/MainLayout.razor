@@ -1,6 +1,9 @@
-﻿@inherits LayoutComponentBase
+﻿@using HeliumHealthMonitor.Data.Shared.Models
+@inject IUserSessionInfo _userSessionInfo
 
-<PageTitle>HeliumHealthMonitor.Presentation.WebUI</PageTitle>
+@inherits LayoutComponentBase
+
+<PageTitle>HeliumHealthMonitor</PageTitle>
 
 <div class="page">
     <div class="sidebar">
@@ -9,7 +12,7 @@
 
     <main>
         <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            <a href="/logout" >Logout</a>
         </div>
 
         <article class="content px-4">
@@ -17,3 +20,7 @@
         </article>
     </main>
 </div>
+
+@code {
+
+}
