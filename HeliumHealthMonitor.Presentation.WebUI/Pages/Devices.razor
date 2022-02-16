@@ -1,6 +1,6 @@
 ﻿@page "/devices"
 
-<PageTitle>Devices</PageTitle>
+<PageTitle>Miner</PageTitle>
 
 @using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
 @using HeliumHealthMonitor.Data.Shared.Models
@@ -10,46 +10,39 @@
 @inject IConfiguration _config
 @inject IUserSessionInfo _userSessionInfo
 @inject NavigationManager _navManager;
-<h3>Devices</h3>
+<h3>Miner</h3>
 
-@if (devices == null)
+@if(devices == null)
 {
-    <p><em>Loading...</em></p>
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
 }
 else
 {
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Miner Name</th>
-                <th>Ladestand</th>
-                <th>Spannung</th>
-                <th>Letzte Messung</th>
-                <th>Mac-Adresse</th>
-                <th>Aktion</th>
-
-            </tr>
-        </thead>
-        <tbody>
-            @foreach(var d in devices)
-            {
-                <tr onclick="NavigateToDetailsPage">
-                    <td>@d.HeliumName</td>
-                    <td>@($"{d.VoltagePercent} %")</td>
-                    <td>@($"{d.Voltage} V")</td>
-                    <td>@d.MeasureTime.ToLocalTime().ToString("dd.MM.yyyy HH:mm:ss")</td>
-                    <td>@d.Macaddress</td>
-                    <td><a href=@($"/device-details/{d.Id}") class="btn btn-outline-primary">Details</a></td>
-                </tr>
-            }
-        </tbody>
-    </table>
-    
+    <MudTable Items="@devices.Take(devices.Count)" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info" OnRowClick="NavigateToDetailPage" T="DeviceModel">
+    <HeaderContent>
+        <MudTh>Miner Name</MudTh>
+        <MudTh>Ladestand</MudTh>
+        <MudTh>Spannung</MudTh>
+        <MudTh>Letzte Messung</MudTh>
+        <MudTh>Mac-Adresse</MudTh>
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Miner Name">@context.HeliumName</MudTd>
+        <MudTd DataLabel="Ladestand">@($"{context.VoltagePercent} %")</MudTd>
+        <MudTd DataLabel="Spannung">@($"{context.Voltage} V")</MudTd>
+        <MudTd DataLabel="Letzte Messung">@context.MeasureTime.ToLocalTime().ToString("dd.MM.yyyy HH:mm:ss")</MudTd>
+        <MudTd DataLabel="Mac-Adresse">@context.Macaddress</MudTd>
+    </RowTemplate>
+</MudTable>
 }
+
+    
+
 @code {
 
     bool isAuthorized;
     List<DeviceModel> devices;
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -61,5 +54,10 @@ else
         devices = await _deviceDataAccess.GetAll();
         
         await base.OnInitializedAsync();
+    }
+
+    private void NavigateToDetailPage(TableRowClickEventArgs<DeviceModel> deviceModel)
+    {
+        _navManager.NavigateTo($"/device-details/{ deviceModel.Item.Id}");
     }
 }

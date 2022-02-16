@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NzB37XPsFwbdFfpAlubHQ8dI1FQC6TyjjFndgcW/jmE=",
+  "Hash": "S8v3TKWoBvOehVqPsFWV0Eu7BcsBpVVfC0jeSAmH5Eg=",
   "Source": "HeliumHealthMonitor.Presentation.WebUI",
   "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
   "Mode": "Default",
@@ -16,6 +16,40 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js"
+    },
     {
       "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\HeliumHealthMonitor.Presentation.WebUI.styles.css",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",

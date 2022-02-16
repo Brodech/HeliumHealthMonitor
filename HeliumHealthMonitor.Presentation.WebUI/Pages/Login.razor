@@ -2,34 +2,44 @@
 
 @using HeliumHealthMonitor.Data.Shared.Models
 @using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
+@using System.ComponentModel.DataAnnotations
 @inject HttpClient Http
 @inject IUserSessionInfo _userSessionInfo
 @inject IConfiguration _config 
 @inject IUserDataAccess _userDataAccess
 @inject NavigationManager _navManager
 
-<h3>Login</h3>
-
-<p>@message</p>
-
-<EditForm Model="user" OnValidSubmit="OnValid" style="max-width:500px">
-    <DataAnnotationsValidator/>
-    <ValidSummary/>
-    <div class="mb-2">
-        <InputText class="form-control" @bind-Value="user.Username" placeholder="Benutzername"></InputText>
-    </div>
-    <div class="mb-2">
-        <InputText type="password" class="form-control" @bind-Value="user.Password" placeholder="Passwort"></InputText>
-    </div>
-    <div class="mb-2 text-right">
-        <button class="btn btn-secondary" disabled="@isDisabled">login</button>
-    </div>
+<EditForm Model="@user" OnValidSubmit="OnValid">
+<DataAnnotationsValidator/>
+<MudGrid>
+    <MudItem xs="2">
+        <MudPaper></MudPaper>
+    </MudItem>
+    <MudItem xs="8">
+        <MudCard>
+            <MudCardContent>
+                <MudTextField Label="Benutzername"
+                              @bind-Value="user.Username" For="@(() => user.Username)"/>
+                <MudTextField Label="Passwort" HelperText="Min. 6 Zeichen" Class="mt-3"
+                              @bind-Value="user.Password" For="@(() => user.Password)" InputType="InputType.Password"/>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto">Login</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudItem>    
+    <MudItem xs="2">
+        <MudPaper></MudPaper>
+    </MudItem>
+</MudGrid>
 </EditForm>
 
 @code {
     UserLoginFormModel user = new UserLoginFormModel();
     string message = string.Empty;
     bool isDisabled = false;
+
+    bool success;
 
     private async Task OnValid()
     {
@@ -54,5 +64,6 @@
                 }
             }
         }
+        StateHasChanged();
     }
 }

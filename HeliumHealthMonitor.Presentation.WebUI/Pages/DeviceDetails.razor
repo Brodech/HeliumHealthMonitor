@@ -1,18 +1,21 @@
 ﻿@page "/device-details/{Id}"
 
+<PageTitle>Details</PageTitle>
+
 @using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
 @using HeliumHealthMonitor.Data.Shared.Models
 @using HeliumHealthMonitor.BusinessLogic.Authentication
 @inject IDeviceDataAccess _deviceDataAccess;
+@inject IEnergyStatusDataAccess _energyStatusDataAccess;
 @inject IAuthorisation _authorisation;
 @inject IUserSessionInfo _userSessionInfo
 @inject NavigationManager _navManager;
 
-<h3>DeviceDetails</h3>
+<h3>Details</h3>
 
-@if(device == null)
+@if(device == null || !(Series?.Count > 0))
 {
-    <p><em>Loading...</em></p>
+    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
 }
 else
 {
@@ -28,6 +31,9 @@ else
         <li>@($"Letzer Shutdown:{device.LastShutDown}")</li>
         <li>@($"Letzte Messung: {device.MeasureTime}")</li>
     </ul>
+    <div>
+        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" Height="350" ChartOptions="options"></MudChart>
+    </div>
 }
 
 @code {
@@ -35,6 +41,12 @@ else
     public string Id { get; set; }
     bool isAuthorized;
     DeviceModel device;
+    List<EnergyStatusModel> energyStatus;
+    List<ChartSeries> Series;
+    private ChartOptions options = new ChartOptions();
+
+    public string[] XAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep" };
+
 
     protected override async Task OnInitializedAsync()
     {
@@ -43,6 +55,19 @@ else
         if(!isAuthorized){ _navManager.NavigateTo("/"); }
 
         device = await _deviceDataAccess.Get(Id);
+
+        energyStatus = await _energyStatusDataAccess.GetAllFromDevice(Id);
+
+        var data = new double[energyStatus.Count];
+        for(var i = 0; i < energyStatus.Count; i++)
+        {
+            data[i] = energyStatus[i].Voltage;
+        }
+        Series = new List<ChartSeries>() { new ChartSeries() { Name = device.HeliumName, Data = data } };
+
+        options.InterpolationOption = InterpolationOption.NaturalSpline;
+        //options.YAxisFormat = "V";
+
         await base.OnInitializedAsync();
     }
 }

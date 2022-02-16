@@ -6,7 +6,7 @@ namespace HeliumHealthMonitor.Data.Shared.Models
         string? DeviceId { get; set; }
         string? Id { get; set; }
         DateTime MeasureTime { get; set; }
-        string Voltage { get; set; }
-        string VoltagePercent { get; set; }
+        double Voltage { get; set; }
+        double VoltagePercent { get; set; }
     }
 }
