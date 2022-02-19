@@ -50,6 +50,25 @@ namespace HeliumHealthMonitor.Presentation.API.Controllers
             
         }
 
+        [AllowAnonymous]
+        [HttpPost("register")]
+        public async Task<UserLoginResult> Register([FromBody] DeviceRegistrationFormModel userRegistration)
+        {
+            if (userRegistration.Password != userRegistration.Password2)
+            {
+                return new UserLoginResult() { Message = "Password and confirm password do not match.", Success = false };
+            }
+            try
+            {
+                await _authentication.RegisterDevice(userRegistration);
+            }
+            catch (Exception ex)
+            {
+                return new UserLoginResult() { Message = "Device registration has failed.", Success = false };
+            }
+            return new UserLoginResult() { Message = "Registration successful.", Success = true };
+        }
+
         private string Generate(DeviceModel device)
         {
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));

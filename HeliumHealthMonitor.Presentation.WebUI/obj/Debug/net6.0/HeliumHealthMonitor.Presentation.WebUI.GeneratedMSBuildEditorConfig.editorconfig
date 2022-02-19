@@ -47,6 +47,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[P:/repos/HeliumHealthMonitor/HeliumHealthMonitor.Presentation.WebUI/Pages/RegisterDevice.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJEZXZpY2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [P:/repos/HeliumHealthMonitor/HeliumHealthMonitor.Presentation.WebUI/Pages/UserComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlckNvbXBvbmVudC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

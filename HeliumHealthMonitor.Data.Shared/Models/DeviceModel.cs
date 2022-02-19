@@ -7,6 +7,7 @@ public class DeviceModel
     public string Id { get; set; }
     public string Macaddress { get; set; }
     public string Password { get; set; }
+    public string Salt { get; set; }
     public string Role { get; set; }
     public string Location { get; set; }
     public string HeliumName { get; set; }

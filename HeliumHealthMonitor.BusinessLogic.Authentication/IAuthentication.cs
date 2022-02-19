@@ -6,6 +6,7 @@ namespace HeliumHealthMonitor.BusinessLogic.Authentication
     {
         Task<DeviceModel> AuthenticateDevice(DeviceLoginModel deviceLogin);
         Task<UserModel> AuthenticateUser(UserLoginFormModel userLogin);
+        Task RegisterDevice(DeviceRegistrationFormModel userRegistration);
         Task RegisterUser(UserRegistrationFormModel userRegistration);
     }
 }

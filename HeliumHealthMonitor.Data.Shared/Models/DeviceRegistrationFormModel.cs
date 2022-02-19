@@ -2,7 +2,7 @@
 
 namespace HeliumHealthMonitor.Data.Shared.Models;
 
-public class UserRegistrationFormModel
+public class DeviceRegistrationFormModel
 {
     [Required]
     [StringLength(24, ErrorMessage = "Der Benutzername darf nicht mehr als 24 Zeichen enthalten.")]

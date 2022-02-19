@@ -1,17 +1,18 @@
-﻿@page "/register"
-
+﻿@page "/registerdevice"
+@using HeliumHealthMonitor.BusinessLogic.Authentication
 @using HeliumHealthMonitor.Data.Shared.Models
 @inject HttpClient Http
 @inject IConfiguration _config 
+@inject IAuthorisation _authorisation;
+@inject IUserSessionInfo _userSessionInfo
+@inject NavigationManager _navManager;
 
-<h3>Register</h3>
+<h3>RegisterDevice</h3>
 <p>@message</p>
-<p><a href="/login">@login</a></p>
-
 <EditForm Model="reg" OnValidSubmit="OnValid" style="max-width:500px">
     <DataAnnotationsValidator/>
     <div class="mb-2">
-        <InputText class="form-control" @bind-Value="reg.Username" placeholder="Benutzername"></InputText>
+        <InputText class="form-control" @bind-Value="reg.Username" placeholder="Macadresse"></InputText>
     </div>
     <div class="mb-2">
         <InputText type="password" class="form-control" @bind-Value="reg.Password" placeholder="Passwort"></InputText>
@@ -24,18 +25,28 @@
     </div>
 </EditForm>
 
-
-
 @code {
-    UserRegistrationFormModel reg = new UserRegistrationFormModel();
+    DeviceRegistrationFormModel reg = new DeviceRegistrationFormModel();
     string message = string.Empty;
     string login = string.Empty;
     bool isDisabled = false;
+    bool isAuthorized;
+
+     protected override async Task OnInitializedAsync()
+    {
+
+        isAuthorized = _authorisation.IsUserOrAdmin(_userSessionInfo);
+
+        if(!isAuthorized){ _navManager.NavigateTo("/"); }
+        
+        await base.OnInitializedAsync();
+    }
 
     private async Task OnValid()
     {
         isDisabled = true;
-        using (var msg = await Http.PostAsJsonAsync<UserRegistrationFormModel>($"{_config["ApiBaseAddress"]}/api/userauth/register", reg,
+
+        using (var msg = await Http.PostAsJsonAsync<DeviceRegistrationFormModel>($"{_config["ApiBaseAddress"]}/api/devicelogin/register", reg,
             System.Threading.CancellationToken.None))
         {
             if (msg.IsSuccessStatusCode)
@@ -44,11 +55,11 @@
                 message = result.Message;
                 if (result.Success)
                 {
-                    message += " Bitte einloggen um fortzufahren.";
-                    login = "Hier klicken zum Login.";
+                    message = "Gerät registriert";
                 }
                 else
                 {
+                    message = "Gerät nicht registriert";
                     isDisabled = false;
                 }
             }

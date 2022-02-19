@@ -23,9 +23,9 @@ public class Authentication : IAuthentication
     public async Task<DeviceModel> AuthenticateDevice(DeviceLoginModel deviceLogin)
     {
         var currentDevice = (await _deviceDataAccess.GetAll()).FirstOrDefault(d => d.Macaddress.ToLower() ==
-        deviceLogin.Macaddress.ToLower() && d.Password == deviceLogin.Password);
+        deviceLogin.Macaddress.ToLower());
 
-        if (currentDevice != null) return currentDevice;
+        if (currentDevice != null && currentDevice.Password == CreateHash(deviceLogin.Password, currentDevice.Salt)) { return currentDevice; }
 
         return null;
     }
@@ -52,6 +52,19 @@ public class Authentication : IAuthentication
             Role = "User"
         });
         return user;
+    }
+
+    public Task RegisterDevice(DeviceRegistrationFormModel userRegistration)
+    {
+        var salt = GetSalt();
+        var device = _deviceDataAccess.Create(new DeviceModel()
+        {
+            Macaddress = userRegistration.Username,
+            Salt = salt,
+            Password = CreateHash(userRegistration.Password, salt),
+            Role = "Device"
+        });
+        return device;
     }
 
     private static string CreateHash(string password, string salt = "")
