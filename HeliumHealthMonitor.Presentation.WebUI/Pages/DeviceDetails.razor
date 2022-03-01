@@ -11,31 +11,73 @@
 @inject IUserSessionInfo _userSessionInfo
 @inject NavigationManager _navManager;
 
-<h3>Details</h3>
+<PageTitle>Details</PageTitle>
 
-@if(device == null || !(Series?.Count > 0))
-{
-    <MudProgressCircular Color="Color.Default" Indeterminate="true" />
-}
-else
-{
-    <ul>
-        <li>@($"Miner Name:     {device.HeliumName}")</li>
-        <li>@($"Mac-Address:    {device.Macaddress}")</li>
-        <li>@($"Standort:       {device.Location}")</li>
-        <li>@($"Spannung:       {device.Voltage} V")</li>
-        <li>@($"Ladestand:      {device.VoltagePercent} %")</li>
-        <li>@($"Registriert am: {device.RegisterDate}")</li>
-        <li>@($"Letzte Meldung: {device.LastLifeSignal}")</li>
-        <li>@($"Letzer Start:   {device.LastBootup}")</li>
-        <li>@($"Letzer Shutdown:{device.LastShutDown}")</li>
-        <li>@($"Letzte Messung: {device.MeasureTime}")</li>
-    </ul>
-    <div>
-        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" Height="350" ChartOptions="options"></MudChart>
-    </div>
-}
-
+<MudGrid>
+    <MudItem xs="4">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <MudText>Details</MudText>
+        </MudPaper>
+        <MudPaper Width="100%">
+            @if (device == null)
+            {
+                <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+            }
+            else
+            {
+                <MudList Clickable="true">
+                    <MudListItem Text=@($"Miner Name:     {device.HeliumName}") Icon="@Icons.Filled.SpeakerNotes" />
+                    <MudListItem Text=@($"Spannung:       {device.Voltage} V") Icon="@Icons.Filled.BatteryChargingFull" />
+                    <MudListItem Text=@($"Letzte Meldung: {device.LastLifeSignal}") Icon="@Icons.Filled.WatchLater" />
+                    <MudDivider />
+                    <MudListItem Text=@($"Mac-Address:    {device.Macaddress}") Icon="@Icons.Material.Filled.Inbox" />
+                   <MudListItem Text=@($"Standort:       {device.Location}") Icon="@Icons.Material.Filled.Inbox" />
+                    <MudListItem Text=@($"Ladestand:      {device.VoltagePercent} %") Icon="@Icons.Filled.BatteryChargingFull" />
+                   <MudListItem Text=@($"Registriert am: {device.RegisterDate}") Icon="@Icons.Filled.WatchLater" />
+                    <MudListItem Text=@($"Letzer Start:   {device.LastBootup}") Icon="@Icons.Filled.WatchLater" />
+                   <MudListItem Text=@($"Letzer Shutdown:{device.LastShutDown}") Icon="@Icons.Filled.WatchLater" />
+                   <MudListItem Text=@($"Letzte Messung: {device.MeasureTime}") Icon="@Icons.Filled.WatchLater" />
+                </MudList>
+            }
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="8">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <MudGrid>
+                <MudItem  xs="12">
+                     <MudText Class="d-flex align-center justify-center mud-width-full py-8">Voltage</MudText>
+                </MudItem>
+                <MudItem  xs="12">
+                    @if (!(Series?.Count > 0))
+                    {
+                        <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+                    }
+                    else
+                    {
+                        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" Height="350" ChartOptions="options"></MudChart>
+                        <MudMenu Label="Interpolation Algorithm" FullWidth="true">
+                            <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.Straight)">Straight</MudMenuItem>
+                            <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.NaturalSpline)">Natural Spline</MudMenuItem>
+                        </MudMenu>
+                    }
+                </MudItem>
+            </MudGrid>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <MudGrid>
+                <MudItem  xs="12">
+                     <MudText Class="d-flex align-center justify-center mud-width-full py-8">Actions</MudText>
+                </MudItem>
+                <MudItem  xs="12">
+                     <MudButton Variant="Variant.Filled" OnClick=@OnClickBack>Back</MudButton>
+                     <MudButton Variant="Variant.Filled" OnClick=@OnClickLogout>Logout</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
 @code {
     [Parameter]
     public string Id { get; set; }
@@ -45,8 +87,7 @@ else
     List<ChartSeries> Series;
     private ChartOptions options = new ChartOptions();
 
-    public string[] XAxisLabels = { "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep" };
-
+    private string[] XAxisLabels;
 
     protected override async Task OnInitializedAsync()
     {
@@ -59,9 +100,11 @@ else
         energyStatus = await _energyStatusDataAccess.GetAllFromDevice(Id);
 
         var data = new double[energyStatus.Count];
+        XAxisLabels = new string[energyStatus.Count];
         for(var i = 0; i < energyStatus.Count; i++)
         {
             data[i] = energyStatus[i].Voltage;
+            XAxisLabels[i] = energyStatus[i].MeasureTime.ToLocalTime().ToString("HH:mm");
         }
         Series = new List<ChartSeries>() { new ChartSeries() { Name = device.HeliumName, Data = data } };
 
@@ -69,5 +112,21 @@ else
         //options.YAxisFormat = "V";
 
         await base.OnInitializedAsync();
+    }
+
+    private void OnClickBack()
+    {
+        _navManager.NavigateTo($"/dashboard");
+    }
+
+    private void OnClickLogout()
+    {
+        _navManager.NavigateTo($"/logout");
+    }
+
+    void OnClickMenu(InterpolationOption interpolationOption)
+    {
+        options.InterpolationOption = interpolationOption;
+        StateHasChanged();
     }
 }

@@ -1,0 +1,97 @@
+﻿@page "/dashboard"
+
+<PageTitle>Dashboard</PageTitle>
+
+@using HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
+@using HeliumHealthMonitor.Data.Shared.Models
+@using HeliumHealthMonitor.BusinessLogic.Authentication
+@inject IDeviceDataAccess _deviceDataAccess;
+@inject IAuthorisation _authorisation;
+@inject IConfiguration _config
+@inject IUserSessionInfo _userSessionInfo
+@inject NavigationManager _navManager;
+
+<MudGrid>
+    <MudItem xs="3">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <MudText> Website Health</MudText>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="9">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <MudGrid>
+                <MudItem  xs="12">
+                     <MudText Class="d-flex align-center justify-center mud-width-full py-8">Device Overview</MudText>
+                </MudItem>
+                <MudItem  xs="12">
+                     @if(devices == null)
+                    {
+                        <MudProgressCircular Color="Color.Default" Indeterminate="true" />
+                    }
+                    else
+                    {
+                        <MudTable Items="@devices.Take(devices.Count)" Hover="true" Breakpoint="Breakpoint.Sm" LoadingProgressColor="Color.Info" OnRowClick="NavigateToDetailPage" T="DeviceModel">
+                        <HeaderContent>
+                            <MudTh>Miner Name</MudTh>
+                            <MudTh>Ladestand</MudTh>
+                            <MudTh>Spannung</MudTh>
+                            <MudTh>Letzte Messung</MudTh>
+                            <MudTh>Mac-Adresse</MudTh>
+                        </HeaderContent>
+                        <RowTemplate>
+                            <MudTd DataLabel="Miner Name">@context.HeliumName</MudTd>
+                            <MudTd DataLabel="Ladestand">@($"{context.VoltagePercent} %")</MudTd>
+                            <MudTd DataLabel="Spannung">@($"{context.Voltage} V")</MudTd>
+                            <MudTd DataLabel="Letzte Messung">@context.MeasureTime.ToLocalTime().ToString("dd.MM.yyyy HH:mm:ss")</MudTd>
+                            <MudTd DataLabel="Mac-Adresse">@context.Macaddress</MudTd>
+                        </RowTemplate>
+                    </MudTable>
+                    }
+                </MudItem>
+            </MudGrid>
+        </MudPaper>
+    </MudItem>
+    <MudItem xs="12">
+        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
+            <MudGrid>
+                <MudItem  xs="12">
+                     <MudText Class="d-flex align-center justify-center mud-width-full py-8">Actions</MudText>
+                </MudItem>
+                <MudItem  xs="12">
+                     <MudButton Variant="Variant.Filled">New Device</MudButton>
+                     <MudButton Variant="Variant.Filled">New User</MudButton>
+                      <MudButton Variant="Variant.Filled" OnClick=@OnClickLogout>Logout</MudButton>
+                </MudItem>
+            </MudGrid>
+        </MudPaper>
+    </MudItem>
+</MudGrid>
+
+@code {
+
+    bool isAuthorized;
+    List<DeviceModel> devices;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+        isAuthorized = _authorisation.IsUserOrAdmin(_userSessionInfo);
+
+        if(!isAuthorized){ _navManager.NavigateTo("/"); }
+
+        devices = await _deviceDataAccess.GetAll();
+        
+        await base.OnInitializedAsync();
+    }
+
+    private void NavigateToDetailPage(TableRowClickEventArgs<DeviceModel> deviceModel)
+    {
+        _navManager.NavigateTo($"/device-details/{ deviceModel.Item.Id}");
+    }
+
+    private void OnClickLogout()
+    {
+        _navManager.NavigateTo($"/logout");
+    }
+}
