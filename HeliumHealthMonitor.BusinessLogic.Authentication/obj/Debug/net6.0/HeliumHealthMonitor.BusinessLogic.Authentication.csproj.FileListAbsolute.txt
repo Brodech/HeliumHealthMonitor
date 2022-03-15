@@ -15,3 +15,20 @@ P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\ob
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\ref\HeliumHealthMonitor.BusinessLogic.Authentication.dll
 P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.deps.json
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\ref\HeliumHealthMonitor.BusinessLogic.Authentication.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.Data.MongoDBLayer.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\bin\Debug\net6.0\HeliumHealthMonitor.Data.Shared.pdb
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.csproj.AssemblyReference.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.GeneratedMSBuildEditorConfig.editorconfig
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.AssemblyInfoInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.AssemblyInfo.cs
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.csproj.CoreCompileInputs.cache
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.csproj.CopyComplete
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\ref\HeliumHealthMonitor.BusinessLogic.Authentication.dll
+P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.BusinessLogic.Authentication\obj\Debug\net6.0\HeliumHealthMonitor.BusinessLogic.Authentication.pdb

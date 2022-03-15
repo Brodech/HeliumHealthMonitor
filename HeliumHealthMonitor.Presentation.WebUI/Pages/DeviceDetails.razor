@@ -14,7 +14,7 @@
 <PageTitle>Details</PageTitle>
 
 <MudGrid>
-    <MudItem xs="4">
+    <MudItem xs="12">
         <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
             <MudText>Details</MudText>
         </MudPaper>
@@ -25,27 +25,30 @@
             }
             else
             {
-                <MudList Clickable="true">
-                    <MudListItem Text=@($"Miner Name:     {device.HeliumName}") Icon="@Icons.Filled.SpeakerNotes" />
-                    <MudListItem Text=@($"Spannung:       {device.Voltage} V") Icon="@Icons.Filled.BatteryChargingFull" />
-                    <MudListItem Text=@($"Letzte Meldung: {device.LastLifeSignal}") Icon="@Icons.Filled.WatchLater" />
-                    <MudDivider />
-                    <MudListItem Text=@($"Mac-Address:    {device.Macaddress}") Icon="@Icons.Material.Filled.Inbox" />
-                   <MudListItem Text=@($"Standort:       {device.Location}") Icon="@Icons.Material.Filled.Inbox" />
-                    <MudListItem Text=@($"Ladestand:      {device.VoltagePercent} %") Icon="@Icons.Filled.BatteryChargingFull" />
-                   <MudListItem Text=@($"Registriert am: {device.RegisterDate}") Icon="@Icons.Filled.WatchLater" />
-                    <MudListItem Text=@($"Letzer Start:   {device.LastBootup}") Icon="@Icons.Filled.WatchLater" />
-                   <MudListItem Text=@($"Letzer Shutdown:{device.LastShutDown}") Icon="@Icons.Filled.WatchLater" />
-                   <MudListItem Text=@($"Letzte Messung: {device.MeasureTime}") Icon="@Icons.Filled.WatchLater" />
-                </MudList>
+                <MudGrid>
+                    <MudItem xs="6">
+                        <MudList>
+                            <MudListItem Text=@($"Miner Name:     {device.HeliumName}") Icon="@Icons.Filled.SpeakerNotes" />
+                            <MudListItem Text=@($"Mac-Adresse:    {device.Macaddress}") Icon="@Icons.Material.Filled.Inbox" />
+                            <MudListItem Text=@($"Letzte Meldung: {device.LastLifeSignal.ToLocalTime()}") Icon="@Icons.Filled.WatchLater" />
+                        </MudList>
+                    </MudItem>
+                    <MudItem xs="6">
+                        <MudList>
+                            <MudListItem Text=@($"Spannung:       {device.Voltage} V") Icon="@Icons.Filled.BatteryChargingFull" />
+                            <MudListItem Text=@($"Ladestand:      {device.VoltagePercent} %") Icon="@Icons.Filled.BatteryChargingFull" />
+                           <MudListItem Text=@($"Letzte Messung: {device.MeasureTime.ToLocalTime()}") Icon="@Icons.Filled.WatchLater" />
+                        </MudList>
+                    </MudItem>
+                </MudGrid>
             }
         </MudPaper>
     </MudItem>
-    <MudItem xs="8">
+    <MudItem xs="12">
         <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
             <MudGrid>
                 <MudItem  xs="12">
-                     <MudText Class="d-flex align-center justify-center mud-width-full py-8">Voltage</MudText>
+                     <MudText Class="d-flex align-center justify-center mud-width-full py-8">Ladestand</MudText>
                 </MudItem>
                 <MudItem  xs="12">
                     @if (!(Series?.Count > 0))
@@ -54,11 +57,13 @@
                     }
                     else
                     {
-                        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" Height="350" ChartOptions="options"></MudChart>
-                        <MudMenu Label="Interpolation Algorithm" FullWidth="true">
-                            <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.Straight)">Straight</MudMenuItem>
+                        <MudChart ChartType="ChartType.Line" ChartSeries="@Series" XAxisLabels="@XAxisLabels" Width="100%" ChartOptions="options" Class="m-2"></MudChart>
+                        <MudMenu Label="Interpolations Algorithmus" FullWidth="true">
+                            <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.Straight)">keine Inerpolation</MudMenuItem>
                             <MudMenuItem OnClick="() => OnClickMenu(InterpolationOption.NaturalSpline)">Natural Spline</MudMenuItem>
                         </MudMenu>
+                        <MudSlider @bind-Value="zoomHours" Min="6" Max="336" Step="1" Color="Color.Info" onchange=@RefreshData>Zoom: @($"{Math.Round(zoomHours/24, 2).ToString()} Tag/e")</MudSlider>
+                        <MudSlider @bind-Value="slideHours" Min="0" Max="330" Step="1" Color="Color.Error" onchange=@RefreshData>Zeitachse: @($"{slideHours.ToString()} Sunden zurück")</MudSlider>
                     }
                 </MudItem>
             </MudGrid>
@@ -83,12 +88,13 @@
     public string Id { get; set; }
     bool isAuthorized;
     DeviceModel device;
-    List<EnergyStatusModel> energyStatus;
-    List<ChartSeries> Series;
+    private List<EnergyStatusModel> energyStatus;
+    private List<ChartSeries> Series;
     private ChartOptions options = new ChartOptions();
 
     private string[] XAxisLabels;
-
+    private double zoomHours = 24;
+    private double slideHours = 0;
     protected override async Task OnInitializedAsync()
     {
         isAuthorized = _authorisation.IsUserOrAdmin(_userSessionInfo);
@@ -97,21 +103,47 @@
 
         device = await _deviceDataAccess.Get(Id);
 
-        energyStatus = await _energyStatusDataAccess.GetAllFromDevice(Id);
+        energyStatus = await _energyStatusDataAccess.GetTimeSpan(DateTime.UtcNow.AddHours(-zoomHours) ,DateTime.UtcNow);
 
-        var data = new double[energyStatus.Count];
-        XAxisLabels = new string[energyStatus.Count];
-        for(var i = 0; i < energyStatus.Count; i++)
-        {
-            data[i] = energyStatus[i].Voltage;
-            XAxisLabels[i] = energyStatus[i].MeasureTime.ToLocalTime().ToString("HH:mm");
-        }
-        Series = new List<ChartSeries>() { new ChartSeries() { Name = device.HeliumName, Data = data } };
+        Series = GetSeries(energyStatus);
 
         options.InterpolationOption = InterpolationOption.NaturalSpline;
         //options.YAxisFormat = "V";
 
         await base.OnInitializedAsync();
+    }
+
+    private List<ChartSeries> GetSeries(List<EnergyStatusModel> energyStatus)
+    {
+        var data = new double[energyStatus.Count];
+        XAxisLabels = getXlabels(energyStatus);
+        for(var i = 0; i < energyStatus.Count; i++)
+        {
+            data[i] = energyStatus[i].Voltage;
+        }
+        Series = new List<ChartSeries>() { new ChartSeries() { Name = device.HeliumName, Data = data } };
+        return Series;
+    }
+
+    private string[] getXlabels(List<EnergyStatusModel> energieStatus)
+    {
+        var maxLabels = 12;
+        var jumps = energyStatus.Count / maxLabels;
+        string[] Xlabels = new string[energyStatus.Count];
+
+        for(var i = 0; i < energyStatus.Count; i++)
+        {
+            if((i % jumps) == 0)
+            {
+                Xlabels[i] = energyStatus[i].MeasureTime.ToLocalTime().ToString("HH:mm");
+            }
+            else
+            {
+                Xlabels[i] = "";
+            }
+        }
+
+        return Xlabels;
     }
 
     private void OnClickBack()
@@ -129,4 +161,18 @@
         options.InterpolationOption = interpolationOption;
         StateHasChanged();
     }
+    private async Task RefreshData()
+    {
+        if (slideHours != 0)
+        {
+            energyStatus = await _energyStatusDataAccess.GetTimeSpan(DateTime.UtcNow.AddHours(-zoomHours).AddHours(-slideHours) ,DateTime.UtcNow.AddHours(-slideHours));
+        }
+        else
+        {
+            energyStatus = await _energyStatusDataAccess.GetTimeSpan(DateTime.UtcNow.AddHours(-zoomHours) ,DateTime.UtcNow);
+        }
+        Series = GetSeries(energyStatus);
+        StateHasChanged();
+    }
+
 }

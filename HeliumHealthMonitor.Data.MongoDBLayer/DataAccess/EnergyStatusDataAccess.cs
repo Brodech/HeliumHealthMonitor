@@ -29,6 +29,11 @@ public class EnergyStatusDataAccess : IEnergyStatusDataAccess
         var result = await _collection.FindAsync(c => c.DeviceId == id);
         return result.ToList();
     }
+    public async Task<List<EnergyStatusModel>> GetTimeSpan(DateTime begin, DateTime end)
+    {
+        var result = await _collection.FindAsync(c => c.MeasureTime >= begin && c.MeasureTime <= end);
+        return result.ToList();
+    }
     public Task Update(EnergyStatusModel energyStatus)
     {
         var filter = Builders<EnergyStatusModel>.Filter.Eq("Id", energyStatus.Id);

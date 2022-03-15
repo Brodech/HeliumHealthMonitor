@@ -7,4 +7,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HeliumHealthMonitor.Data.MariaDBLayer
-build_property.ProjectDir = P:\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\
+build_property.ProjectDir = P:\Visual Studio\repos\HeliumHealthMonitor\HeliumHealthMonitor.Data.MariaDBLayer\

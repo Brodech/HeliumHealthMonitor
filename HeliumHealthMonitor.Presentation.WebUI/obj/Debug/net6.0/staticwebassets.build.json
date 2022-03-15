@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S8v3TKWoBvOehVqPsFWV0Eu7BcsBpVVfC0jeSAmH5Eg=",
+  "Hash": "lKeGwIqgF4vtTpnBQmwyzrQpIHyrUvUMHHT8oWUW3rc=",
   "Source": "HeliumHealthMonitor.Presentation.WebUI",
   "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "HeliumHealthMonitor.Presentation.WebUI\\wwwroot",
       "Source": "HeliumHealthMonitor.Presentation.WebUI",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css",
+      "Identity": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css"
+      "OriginalItemSpec": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.css"
     },
     {
-      "Identity": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js",
+      "Identity": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js",
       "SourceId": "MudBlazor",
       "SourceType": "Package",
-      "ContentRoot": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
+      "ContentRoot": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\",
       "BasePath": "_content/MudBlazor",
       "RelativePath": "MudBlazor.min.js",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Brodech\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js"
+      "OriginalItemSpec": "C:\\Users\\Benjamin Mell\\.nuget\\packages\\mudblazor\\6.0.6\\staticwebassets\\MudBlazor.min.js"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\HeliumHealthMonitor.Presentation.WebUI.styles.css",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\HeliumHealthMonitor.Presentation.WebUI.styles.css",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "HeliumHealthMonitor.Presentation.WebUI.styles.css",
       "AssetKind": "All",
@@ -65,13 +65,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\HeliumHealthMonitor.Presentation.WebUI.styles.css"
+      "OriginalItemSpec": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\bundle\\HeliumHealthMonitor.Presentation.WebUI.styles.css"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HeliumHealthMonitor.Presentation.WebUI.bundle.scp.css",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HeliumHealthMonitor.Presentation.WebUI.bundle.scp.css",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Computed",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "HeliumHealthMonitor.Presentation.WebUI.bundle.scp.css",
       "AssetKind": "All",
@@ -82,13 +82,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HeliumHealthMonitor.Presentation.WebUI.bundle.scp.css"
+      "OriginalItemSpec": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HeliumHealthMonitor.Presentation.WebUI.bundle.scp.css"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\site.css",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\css\\site.css",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\favicon.ico",
+      "Identity": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\favicon.ico",
       "SourceId": "HeliumHealthMonitor.Presentation.WebUI",
       "SourceType": "Discovered",
-      "ContentRoot": "P:\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
+      "ContentRoot": "P:\\Visual Studio\\repos\\HeliumHealthMonitor\\HeliumHealthMonitor.Presentation.WebUI\\wwwroot\\",
       "BasePath": "_content/HeliumHealthMonitor.Presentation.WebUI",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

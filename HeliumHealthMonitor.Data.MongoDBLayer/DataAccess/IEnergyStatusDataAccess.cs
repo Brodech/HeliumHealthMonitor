@@ -9,6 +9,7 @@ namespace HeliumHealthMonitor.Data.MongoDBLayer.DataAccess
         Task<EnergyStatusModel> Get(string id);
         Task<List<EnergyStatusModel>> GetAll();
         Task<List<EnergyStatusModel>> GetAllFromDevice(string id);
+        Task<List<EnergyStatusModel>> GetTimeSpan(DateTime begin, DateTime end);
         Task Update(EnergyStatusModel energyStatus);
     }
 }
